@@ -1,0 +1,11 @@
+{
+  "navigationBarBackgroundColor": "#FF6461",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "发布闲置",
+  "backgroundColor": "#FF6461",
+  "backgroundTextStyle": "light",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "upload": "/components/upload/upload"
+  }
+}

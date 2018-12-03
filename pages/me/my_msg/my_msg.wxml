@@ -1,0 +1,15 @@
+<view wx:for="{{data}}"  wx:if='{{data.length>0}}' class='rowPanel panel' hover-class='hover' bindtap='go' id='msg{{index}}'>
+<view class='rowPanel' style='width:15%;'>
+<image class='avatar' src='{{item.avatarUrl}}'></image>
+<view class='reddot' wx:if="{{!item.read}}">
+</view>
+
+</view>
+<view class='columnPanel'>
+<label class='content'>{{item.content}}</label>
+<label class='title'>{{item.title}}</label>
+<label class='ctime'>{{item.createTime}}</label>
+</view>
+</view>
+
+<empty show="{{data.length==0}}" tip="您还没有消息哦~" />

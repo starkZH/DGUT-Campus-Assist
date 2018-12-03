@@ -1,0 +1,3 @@
+<image src="{{img}}" mode='scaleToFill' class='img' />
+<rich-text nodes="{{show}}" bindtap="tap"></rich-text>
+<button  bindtap='change'>没有显示？切换一下</button>

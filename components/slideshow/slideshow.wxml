@@ -1,0 +1,8 @@
+<swiper wx:if="{{imgUrls.length>0}}" class='swiper' indicator-dots="{{indicator_dots==true}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}" wx:for-item="imageItem" wx:for-index="imgIndex"  >
+    <swiper-item>
+      <image src='{{imageItem.img}}'  id="img{{imgIndex}}"  bindtap='_toPage' class='img'/>
+    </swiper-item>
+  </block>
+</swiper>

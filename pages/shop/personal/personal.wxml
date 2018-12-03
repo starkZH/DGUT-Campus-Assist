@@ -1,0 +1,21 @@
+
+
+<view class="infoPanel columnPanel"   hover-start-time='10' hover-stay-time='10'>
+<image class='avatar' src='{{info.avatarUrl}}'></image>
+<view class='usermsg' >
+<view class='rowPanel'>
+<image src='/images/gender/gender{{info.gender}}.png' class='gender'></image>
+<label class='name'>{{info.name}}</label>
+</view>
+<label class='desc'>{{info.introduce}}</label>
+</view>
+</view>
+
+
+
+
+<good_list   data="{{data}}" tip="这个人很懒哦，还没有发布过宝贝~" />
+
+<view wx:if="{{showLoading&&data.length>0}}" class='loadingTip'>
+<view class='tiptext'>{{loadingTip}}</view>
+</view>

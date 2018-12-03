@@ -1,0 +1,4 @@
+{"usingComponents": {
+    "msg_list": "/components/msg_list/msg_list",
+    "loading": "/components/bottomLoading/bottomLoading"
+  }}

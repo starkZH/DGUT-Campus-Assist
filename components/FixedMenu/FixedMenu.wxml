@@ -1,0 +1,8 @@
+
+<view class='rowPanel menuPanel' wx:if="{{show}}">
+<view class='subPanel columnPanel' wx:for="{{menuText}}" bindtap='_navigate'  id='menu{{index}}' >
+<image class='l_icon'  src='/images/{{menuIcon[menuIndex==index?1:0][index]}}'></image>
+<label class='tiptext' style='color:{{menuIndex==index?"#FF6461":"lightgray"}}'>{{item}}</label>
+<view wx:if="{{badge[index].length>0&&badge[index]!=0}}" class='badge'>{{badge[index]}}</view>
+</view>
+</view>

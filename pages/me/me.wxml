@@ -1,0 +1,32 @@
+<block wx:if="{{show}}">
+<view class="infoPanel columnPanel"  bindtap='onPullDownRefresh'  hover-start-time='10' hover-stay-time='10'>
+<image class='avatar' src='{{info.avatarUrl}}'></image>
+<view class='usermsg' >
+<block wx:if="{{info.nickName.length>0}}">
+<label class='name'>{{info.nickName}}</label>
+</block> 
+<block wx:else>
+<button class='tip'  open-type="getUserInfo" style='background-color:rgba(0,0,0,0);' bindgetuserinfo='onShow' bindtap='onShow'>{{tip}}</button>
+</block>
+
+</view>
+</view>
+
+<view class="menuItem"  hover-class='hover' style='margin-top:0%'  hover-start-time='10' hover-stay-time='10' wx:for="{{menuItem}}"  bindtap='navigate' id='{{index}}'>
+<image mode='scaleToFill' class="image" src="{{menuIcon[index]}}" />
+<label class="menuText">{{item}}<view wx:if="{{index==0&&new_msg>0}}" class='badge'>{{new_msg}}</view></label> 
+
+</view>
+
+<view class="menuItem"  hover-start-time='10' hover-stay-time='10' >
+<image mode='scaleToFill' class="image" src="/images/feedback.png" />
+<button   class="service" open-type="contact" >意见反馈</button>
+</view>
+
+<view class="menuItem"  hover-start-time='10' hover-stay-time='10' >
+<image mode='scaleToFill' class="image" src="/images/setting.png" />
+<button   class="service" open-type="openSetting" >设置</button>
+</view>
+
+</block>
+

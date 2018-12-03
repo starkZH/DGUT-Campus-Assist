@@ -1,0 +1,11 @@
+
+.tiptext{
+font-size:32rpx;
+margin-top:16rpx;
+text-align:center;
+}
+.icon_404{
+  margin-top: 20%;
+  width:191rpx;
+height:128rpx;
+}

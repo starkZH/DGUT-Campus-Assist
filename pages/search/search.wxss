@@ -1,0 +1,40 @@
+page{
+  width: 100%;
+  height: 100%;
+}
+
+.input{
+  margin-top: 20%;
+box-shadow: 0px 0px 10px gray;
+width: 90%;
+height: 5%;
+border-radius: 6px;
+margin-left: 5%;
+}
+.go{
+  background-color:#1296db;
+  color: white;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 10%;
+}
+.img{
+  width: 32px;
+  height: 32px;
+  margin-left: 4px;
+  margin-top: 4px;
+}
+.mylist{
+  margin-left: 5%;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+}
+.text{
+  margin-left: 2%;
+  margin-top: 1%
+}
+.img2{
+  width: 28px;
+  height: 28px;
+}

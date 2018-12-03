@@ -1,0 +1,2 @@
+
+<good_list collect_mode='true' tip='您还没有收藏过物品哦~' bind:cancel_collect="cancel_collect" data="{{collection}}" />

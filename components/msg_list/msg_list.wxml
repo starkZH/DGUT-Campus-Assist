@@ -1,0 +1,66 @@
+<view class='MsgPanel'>
+  <view wx:for="{{data}}" class='subMsg' style='display:flex;flex-direction:column'>
+    <image wx:if="{{item.top!=0}}" class='label' style='position:absolute;right:0;margin-right:0;' src='/images/top.png'> </image>
+    <view class='userInfo'>
+      <image class='avatar' src='{{item.avatarUrl}}'></image>
+      <view class='rightPanel' bindtap='detail' id="msg{{index}}">
+        <label class='name'>{{item.name}}</label>
+        <label class='ctime'> {{item.createTime}}</label>
+      </view>
+    </view>
+
+    <view class='contentPanel' style='display:flex;flex-direction:column'>
+
+      <view class='content'>
+        <label class='label'>
+          <label class='labelText'>#{{label[item.kind]}}#</label>
+        </label>
+        <label></label>
+        <label bindtap='detail' id="txt{{index}}">{{item.text}}</label>
+      </view>
+      <view class='imagePanel' wx:if="{{item.imgUrls.length>0}}">
+
+        <image wx:for="{{item.imgUrls}}" wx:if="{{imgIndex<3}}" wx:for-item="imageItem" wx:for-index="imgIndex" bindtap='preview' src='{{imageItem}}' style='width:{{imgSize}}px;height:{{imgSize}}px;' id="img{{index}},{{imgIndex}}" class='img'>
+        </image>
+        <view class='NumberMask' bindtap='preview' id="img{{index}},2" style='width:{{imgSize-(-1)}}px;height:{{imgSize}}px;position:absolute;right:{{windowWidth*0.03}}px' wx:if='{{item.imgUrls.length>3}}'>
+          <view style='margin-top:{{imgSize-35}}rpx'>+{{item.imgUrls.length-3}}</view>
+        </view>
+      </view>
+
+
+      <view class='menuPanel'>
+        <view wx:for="{{item.msginfo}}" id="e{{index}}" wx:for-index='infoIndex' wx:for-item="infoItem" class='subMenu rowPanel' bindtap='{{menuEvent[infoIndex]}}'>
+          <image src='/images/like_selected.png' wx:if="{{infoIndex==1&&item.like_flag==1}}" class='menuIcon'></image>
+          <image src='{{menuIcon[infoIndex]}}' wx:else class='menuIcon'></image>
+          <label class='tipNum' wx:if="{{infoIndex==1&&item.like_flag}}" style='color:red;'>{{infoItem}}</label>
+          <label class='tipNum' wx:else>{{infoItem}}</label>
+        </view>
+        <button size='mini' id='share{{index}}' class='subMenu share rowPanel' style='display:flex;flex-direction:row;width:35%;' open-type='share'>
+          <image src='/images/share.png' class='menuIcon'></image>
+          <view class='tipNum' style='margin-top:-13rpx;'>
+            分享
+          </view>
+        </button>
+      </view>
+
+      <view class='CommentsPanel' bindtap='detail' id="com{{index}}" wx:if="{{item.comments&&item.comments.length>0}}">
+        <view wx:if="{{commentIndex<6}}" wx:for="{{item.comments}}" bindlongtap='delComment' hover-start-time='0' hover-stay-time='0' hover-class='hover' wx:for-index="commentIndex" wx:for-item="commentItem" id='{{index}},{{commentIndex}}' class='comment'>
+          <view wx:if="{{commentItem.msgId==commentItem.parentId||!commentItem.replyTo}}">
+            <label class='commenter'>{{commentItem.commenterName}}:</label>
+            <label>{{commentItem.content}}</label>
+          </view>
+          <view wx:else>
+            <label class='commenter'>{{commentItem.commenterName}}</label>回复
+            <label class='commenter'>{{commentItem.replyTo}}:</label>
+            <label>{{commentItem.content}}</label>
+          </view>
+        </view>
+        <view wx:if="{{item.comments.length>6}}" class='tip'>
+          还有{{item.comments.length-6}}条精彩评论
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+</view>

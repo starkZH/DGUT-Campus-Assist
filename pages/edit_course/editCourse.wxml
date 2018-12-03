@@ -1,0 +1,33 @@
+
+<view class='courseItem'>
+<view class='tip'>
+<image src="/images/sun.png" class="image" />
+<label class='titletext'>星期</label>
+</view>
+ <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" class="picker">
+       {{array[index]}} 
+ </picker>
+</view>
+
+
+<view class='courseItem'  >
+<view class='tip'>
+<image src="/images/jieshu.png" class="image" />
+<label class='titletext'>节数</label>
+</view>
+ <picker bindchange="bindMulPickerChange"    range="{{dur}}" class="picker" mode="multiSelector">
+{{ jieshu}}
+  </picker>
+</view>
+
+
+<view class='courseItem' wx:for="{{tiptext}}">
+<view class="tip">
+<image mode="scaleToFill" src="{{imagesrc[index]}}" class="image" ></image>
+<label class="titletext">{{item}}</label>
+</view>
+<input class="infor" value="{{content[index]}}" id="input{{index}}" bindinput="input" />
+</view>
+
+<button class='edit' bindtap="saveCourse">保存</button>
+<button class='del' bindtap="deleteCourse" wx:if="{{disabled}}">删除</button>

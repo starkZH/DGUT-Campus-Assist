@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "个人宝贝主页",
+  "usingComponents": {
+    "good_list": "/components/good_list/good_list"
+  }
+}

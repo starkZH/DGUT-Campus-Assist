@@ -1,0 +1,7 @@
+<view class='s_panel'>
+<view class='inner'>
+<input  class='input' id='keyword' bindtap='tapInput' style='{{inputStyle}}' bindblur='blurInput' bindinput='_input' placeholder='{{placeholder}}' name="keyword" />
+<image src='/images/searchIcon.png' bindtap='_search' class='s_icon'></image>
+</view>
+</view>
+<good_list showUser='true'  data="{{data}}" />

@@ -1,0 +1,19 @@
+
+<image src="/images/bg.jpg" class='bg' ></image>
+
+<block wx:if="{{login}}">
+
+<button class='scan' bindtap='scan'>点击扫描</button>
+</block>
+
+
+<block wx:else>
+<view class='infoPanel'>
+<view class='info'>姓名：  {{baseInfo.name}}</view>
+<view class='info'>学号：  {{baseInfo.xh}}</view>
+<view class='info'>学院：  {{baseInfo.xy}}</view>
+<view class='info'>专业：  {{baseInfo.zy}}</view>
+<view class='info'>班级：  {{baseInfo.class}}</view>
+</view>
+<button class='button' bindtap='change' >更换账号</button>
+</block>

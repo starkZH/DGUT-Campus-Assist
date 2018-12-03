@@ -1,0 +1,6 @@
+{
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "upload": "/components/upload/upload"
+  }
+  }

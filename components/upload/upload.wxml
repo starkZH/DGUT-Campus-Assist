@@ -1,0 +1,26 @@
+<view class='upload'>
+<view wx:if="{{item}}" wx:for="{{Rows}}"  style='height:{{imageSize[0]}}px' class='image'>
+<image class='obj' src="{{item}}" id="r{{index}}" bindtap='tapImage'  > </image>
+<view  id='u{{index}}' bindtap='uploadImg' wx:if="{{imageNum!=index}}" class='uploadTip'><label wx:if="{{rowState[index]==1}}">正在上传</label><label wx:elif="{{rowState[index]==2}}">上传成功</label><label wx:else>上传失败</label></view>
+<view wx:if="{{imageNum!=index&&rowState[index]!=1}}" class='close uploadTip' style='left:{{imageSize[0]+45}}rpx;top:-{{imageSize[0]+18}}px;' id="i{{index}}"   bindtap= 'delImage' >x</view>
+</view>
+<view class='imagePanel' >
+
+
+</view>
+<!--view class='imagePanel' wx:if="{{Rows[1].length>0&&Rows[1][0]}}" >
+<view wx:if="{{item}}"   wx:for="{{Rows[1]}}" src="{{item}}"  class='image'>
+<image style='width:100%;height:100%' src="{{item}}"  id="r4_{{index}}" bindtap='tapImage' > </image>
+<view  id='u4_{{index}}' bindtap='uploadImg' wx:if="{{imageNum-index-4!=0}}" class='uploadTip'><label wx:if="{{rowState[1][index]==1}}">正在上传</label><label wx:elif="{{rowState[1][index]==2}}">上传成功</label><label wx:else>上传失败</label></view>
+<view wx:if="{{imageNum-index-4!=0&&rowState[1][index]!=1}}" class='close uploadTip' style='left:{{imageSize[0]+45}}rpx;top:-{{imageSize[1]+18}}px;' id="i4_{{index}}" bindtap= 'delImage'>x</view>
+</view>
+
+</view>
+<view class='imagePanel'  wx:if="{{Rows[2].length>0&&Rows[2][0]}}" >
+<view wx:if="{{item}}" wx:for="{{Rows[2]}}" src="{{item}}" class='image'>
+<image style='width:100%;height:100%' src="{{item}}"  id="r9_{{index}}" bindtap='tapImage'  > </image>
+<view  bindtap='uploadImg' id='u9_{{index}}' wx:if="{{imageNum-index-8}}" class='uploadTip'><label wx:if="{{rowState[2][index]==1}}">正在上传</label><label wx:elif="{{rowState[2][index]==2}}">上传成功</label><label wx:else>上传失败</label></view>
+<view wx:if="{{imageNum-index-8&&rowState[2][index]!=1}}" class='close uploadTip' style='left:{{imageSize[0]+45}}rpx;top:-{{imageSize[1]+18}}px;' id="i9_{{index}}"  bindtap= 'delImage'>x</view>
+</view>
+</view-->
+</view>

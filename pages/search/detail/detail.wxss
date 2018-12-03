@@ -1,0 +1,139 @@
+page{
+  width: 100%;
+  height: 100%
+}
+.video{
+  width: 100%;
+}
+.img{
+  margin-left: 20%;
+  width: 60%;
+  height: 40%;
+}
+.info{
+  display: flex;
+  flex-direction: column;
+  color: gray;
+  margin-left: 2%;
+  margin-top: 5%;
+  width: 96%;
+}
+.score{
+color: orange;
+margin-left: 5%;
+}
+.name{
+  color: black;
+  margin-top: 1%;
+}
+.douban{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.menu{
+  display: flex;
+  flex-direction: row;
+  margin-left: 2%;
+  margin-top: 1%;
+}
+.user{
+width: 100%;
+display: flex;
+flex-direction: row;
+  border-bottom: 1px solid darkgray;
+}
+.download{
+  width: 32px;
+  height: 32px;
+  margin-left: 50%;
+}
+.recommand{
+  display: flex;
+  flex-direction: row;
+  margin-top: 5%; 
+  width: 100%;
+  height: 100%;
+}
+.rm{
+  display: flex;
+  flex-direction: column;
+  width:50%;
+  height: 100%;
+  margin-left: 3%;
+}
+.scroll{
+  overflow: scroll;
+  width: 100%;
+  height: 30%;
+  margin-top: 5%;
+}
+.post{
+  height: 100%;
+  width: 30%;
+}
+.linksPanel{
+  width: 100%;
+  height: 50%;
+  bottom: 0px;
+  position: fixed;
+  background-color: #515151;
+  display: flex;
+  flex-direction: column;
+
+}
+.quality-5{
+background-color: orange;
+margin-top: 5%;
+}
+.quality-4{
+  background-color: lightblue;
+  margin-top: 5%;
+}
+.quality-3{
+  background-color: darkgray;
+  margin-top: 5%;
+}
+.quality-2{
+  background-color: gray;
+  margin-top: 5%;
+}
+.quality-0{
+  background-color: lightcoral;
+  margin-top: 5%;
+}
+.linkset{
+  display: flex;
+  flex-direction: row;
+  margin-left: 3%;
+  width: 94%;
+  margin-top: 3%;
+}
+.filesize{
+  margin-left: 10%;
+  color: white;
+}
+.text{
+  color: white;
+}
+.darkbg{
+  position: fixed;
+  top: 0px;
+  height: 0px;
+  width: 100%;
+  background-color: gray;
+  opacity: 20%;
+}
+.button{
+  background-color: rgb(10, 186, 7);
+  color: white;
+  margin-left: 5%;
+  width: 90%;
+  margin-top: 3%;
+}
+.tiptext{
+  margin-left: 2%;
+  width: 96%;
+  color: lightgray;
+  margin-top: 2%;
+}

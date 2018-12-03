@@ -1,0 +1,20 @@
+
+<view wx:for="{{allScore}}" class='panel'>
+<label class='xq'>{{item.xq}}</label>
+<view class='titlePanel' >
+<label class='tsub'>课程名称</label>
+<label class='tsco'>分数</label>
+<label class='txf'>学分</label>
+</view>
+<view wx:for="{{item.detail}}" wx:for-item="subitem" class='subpanel'>
+<label class='subject'>{{subitem.subject}}</label>
+<label class='score'>{{subitem.score}}</label>
+<label class='xf'>{{subitem.getXf}}</label>
+</view>
+<!--view class='subpanel'>
+<label class='subject'>总绩点</label>
+<label class='score'>{{item.final}}</label>
+</view-->
+
+
+</view>

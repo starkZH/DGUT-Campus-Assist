@@ -1,0 +1,89 @@
+{
+"pages": [
+    "pages/index/index",
+    "pages/index/home/home",
+    "components/good_list/good_list",
+    "components/slideshow/slideshow",
+    "components/mask/mask",
+    "components/upload/upload",
+    "components/msg_list/msg_list",
+    "components/bottomLoading/bottomLoading",
+    "components/searchPanel/searchPanel",
+    "components/empty/empty",
+    "components/FixedMenu/FixedMenu",
+
+    "pages/social/social",
+"pages/index/job/job",
+  "pages/index/kcb/kcb",
+  "pages/settings/setting",
+  "pages/me/me",
+  "pages/me/my_moment/my_moment",
+  "pages/me/my_goods/my_goods",
+  "pages/me/my_msg/my_msg",
+  "pages/me/collection/collection",
+  "pages/me/cap/cap",
+  "pages/social/makeMsg/makeMsg",
+  "pages/social/result/result",
+  "pages/social/momentDetail/momentDetail",
+  "pages/edit_course/editCourse",
+  "pages/shop/shop",
+  "pages/shop/search/search",
+  "pages/shop/personal/personal",
+  "pages/shop/deliver_good/deliver_good",
+  "pages/shop/good_detail/good_detail",
+
+  "pages/search/search",
+  "pages/search/booklist/booklist",
+  "pages/search/site/site",
+  "pages/search/detail/detail",
+  "pages/search/result/result",
+  "pages/loginJW/loginJW",
+  "pages/myscore/myscore",
+  "pages/allCourse/allCourse",
+  "pages/myChosenCourse/myChosenCourse",
+  "pages/LevelExam/LevelExam",
+  "pages/EcardFare/EcardFare",
+  "pages/BorrowBooks/BorrowBooks"
+],
+"window": {
+  "navigationBarBackgroundColor": "#FF6461",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "莞工校园助手",
+  "backgroundColor": "#FF6461",
+  "backgroundTextStyle": "light",
+  "enablePullDownRefresh": true
+},
+"tabBars": {
+  "color": "#a9b7b7",
+  "selectedColor": "#FF6461",
+  "borderStyle": "#1296db",
+   "list": [
+   {
+    "selectedIconPath": "/images/main.png",
+    "iconPath": "/images/main_Dis.png",
+    "pagePath": "pages/index/index",
+    "text": "首页"
+  },
+{
+  "selectedIconPath": "/images/school.png",
+  "iconPath": "/images/school_Dis.png",
+  "pagePath": "pages/social/social",
+  "text": "校内圈"
+},
+{
+  "selectedIconPath": "/images/shop.png",
+  "iconPath": "/images/shop_Dis.png",
+  "pagePath": "pages/shop/shop",
+  "text": "二手"
+},
+    {
+      "selectedIconPath": "/images/user.png",
+      "iconPath": "/images/user_Dis.png",
+      "pagePath": "pages/me/me",
+      "text": "我"
+    }
+  ]
+}
+  
+  
+}

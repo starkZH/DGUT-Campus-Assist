@@ -1,0 +1,13 @@
+
+<view class='guancang' >
+<view wx:for="{{site}}" class='gcinfo' >
+<view class='{{item.color}}'>{{item.RoomStatus}}</view>
+<view class='panel2'>
+<view class='callno' >{{item.Callno}}</view>
+<view class='room2' >{{item.Room2}}</view>
+<view class='site'>{{item.Site}}</view>
+<view class='sublib'>{{item.Sublib}}</view>
+</view>
+
+</view>
+</view>

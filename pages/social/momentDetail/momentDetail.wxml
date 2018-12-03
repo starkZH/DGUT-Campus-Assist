@@ -1,0 +1,84 @@
+
+<view class='subMsg columnPanel'>
+<view class='userInfo'>
+<image class='avatar' src='{{data.avatarUrl}}'></image>
+<view class='rightPanel'>
+<label class='name'>{{data.name}}</label>
+<label class='ctime'> {{data.createTime}}<label class='tipNum' style='float:right;width:auto'>浏览量：{{data.watch}}</label></label>
+</view>
+<image wx:if="{{item.top==1}}" class='label' style='position:absolute;left:90%;' src='/images/top.png'> </image>
+
+</view>
+</view>
+<view style='width:100%; background-color: white;'>
+
+<view class='contentPanel columnPanel'>
+<view class='content'><label  class='label' ><label class='labelText'>#{{label[data.kind]}}</label></label>{{data.text}}
+</view>
+<view class='imagePanel columnPanel' wx:if='{{data.imgUrls.length>0}}'>
+<image  wx:for="{{data.imgUrls}}" wx:for-item="imageItem" wx:for-index="imgIndex"  bindtap='preview' src='{{imageItem}}'  id="img{{imgIndex}}"  class='img'>
+</image>
+</view>
+</view>
+</view>
+
+<view class='CommentsPanel'>
+<view class='commentNum'>全部评论({{comment.length}}条)</view>
+<view class='commentPanel columnPanel'  wx:for="{{comment}}">
+<view class='userInfo'>
+<image class='avatar' src='{{item.commenterAvatar}}'></image>
+<view class='rightPanel' style='width:85%;' >
+<label class='name'>{{item.commenterName}}</label>
+<label class='ctime'> {{item.commentTime}}</label>
+
+<view style='width:100%;' id='com{{index}}' bindtap='delComment'>
+{{item.content}}
+</view>
+<view class='menuPanel'>
+<label class='tipNum'>{{item.like}}</label>
+<!--image src='/images/like.png' class='menuIcon'></image-->
+<image src='/images/comment.png' bindtap='comment' id='ico{{index}}' class='menuIcon'></image>
+</view>
+<view  class='subComment columnPanel' >
+<view wx:for="{{item.comment}}" hover-class='hover' bindtap='operate' wx:for-index='commentIndex' id='com{{index}},{{commentIndex}}' data-sub='1' wx:for-item="commentItem">
+<view class='singleComment' wx:if="{{!commentItem.replyTo}}">
+<label class='commenter' >{{commentItem.commenterName}}:</label>
+<label >{{commentItem.content}}</label>
+</view>
+<view class='singleComment'  wx:else>
+<label class='commenter'>{{commentItem.commenterName}}</label>回复
+<label class='commenter'>{{commentItem.replyTo}}:</label>
+<label>{{commentItem.content}}</label>
+</view>
+</view>
+</view>
+</view>
+</view>
+</view>
+
+</view>
+<view style='height:10%;'></view>
+<view class='bottomPanel rowPanel'>
+<view class='singleMenu columnPanel'style='width:130rpx;margin-left:5%;' bindtap='homepage' id='--1'>
+<image  class='menuIcon' src='/images/school.png' ></image>
+<label  class='tipNum' style='color:rgb(244, 49, 100)' >校内圈</label>
+</view>
+<button open-type='share' class='singleMenu columnPanel' style='margin-left:-3%;margin-right:2%;width:109rpx' >
+<image  class='menuIcon' src='/images/share.png' ></image>
+<view  class='tipNum' style='top:27%;position:absolute;' >分享</view>
+</button>
+<view wx:for="{{menuIcon}}" bindtap='{{menuEvent[index]}}'   id='----1' class='singleMenu columnPanel'>
+<image src='/images/like_selected.png'  class='menuIcon' wx:if="{{index==1&&data.like_flag==1}}"></image>
+<image  class='menuIcon' wx:else src='{{item}}' ></image>
+<label  class='tipNum' style='color:{{menuColor[index]}}'>{{menuText[index]}}</label>
+</view>
+</view>
+
+
+<view class='mask' bindtap='hide'  wx:if="{{maskShow}}" animation="{{animation}}"></view>
+
+<view wx:if="{{showPanel}}"  style='bottom:{{bottom}}px;'  animation="{{animation}}" class='deliver columnPanel'>
+<label class='title'>评论</label>
+<textarea  fixed='true'  bindfocus='focus' bindinput='input_c' placeholder='{{placeholder}}' class='inputArea'  bindblur='blur'></textarea>
+<button class='contact' bindtap='send_comment'>发表评论</button>
+</view>

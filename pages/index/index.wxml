@@ -1,0 +1,11 @@
+
+<home refresh="{{refreshIndex==0}}" compId='0' reachBottom="{{reachBottomIndex==0}}" bind:base="setBase" show="{{menuIndex==0}}"  />
+<shop refresh="{{refreshIndex==2}}" compId='2' reachBottom="{{reachBottomIndex==2}}"  show="{{menuIndex==2}}" />
+<social refresh="{{refreshIndex==1}}" compId='1' reachBottom="{{reachBottomIndex==1}}"  show="{{menuIndex==1}}"  />
+<me refresh="{{refreshIndex==3}}" compId='3'  reachBottom="{{reachBottomIndex==3}}" show="{{menuIndex==3}}"  />
+
+<view style='height:11%'> </view>
+<FixedMenu id='menu' badge="{{badge}}" menuText="{{menus}}" bind:switchMenu="navigate" menuIcon="{{menuIcon}}" show="{{base.menuVersion==menuVersion}}" />
+
+
+

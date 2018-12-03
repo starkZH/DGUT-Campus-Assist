@@ -1,0 +1,15 @@
+<view class='base'>
+<image src='/images/bg.jpg' class='bgImage'></image>
+<view class='yetext'>余额</view>
+<view class='last'>{{info[0].fare}} 元</view>
+
+<view class='t2'>最近一笔消费</view>
+<view class='v2'>{{info[1].fare}} 元</view>
+
+<view class='t3'>本周消费</view>
+<view class='v3'>{{info[2].fare}} 元</view>
+</view>
+
+<view class='tip'>
+* 请注意数据有所延迟，非实时数据。
+</view>

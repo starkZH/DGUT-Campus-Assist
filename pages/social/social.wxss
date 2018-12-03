@@ -1,0 +1,434 @@
+page{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(250,250,250)
+}
+.columnPanel{
+display: flex;
+  flex-direction: column;
+}
+.rowPanel{
+  display: flex;
+  flex-direction: row;
+}
+.deliverText{
+  font-size:32rpx;
+position:absolute;
+left:80rpx;
+top:5rpx;
+
+}
+.tiptext{
+font-size:30rpx;
+margin-top:16rpx;
+text-align:center;
+color: #454545
+}
+.deliver_c{
+  position: fixed;
+  bottom: 0px;
+  background-color: white;
+width: 100%;
+z-index: 999;
+border-top: 1px solid lightgray;
+}
+.deliver{
+  position: fixed;
+  right: 0px;
+  bottom: 15%;
+  border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  background-color: #FF6461;
+  color: white;
+  font-size: 36rpx;
+  width: 180rpx;
+  text-align: right;
+  box-shadow: 0 0 5px #FF6461;
+  height:80rpx;
+}
+.l_icon {
+  width:52rpx;
+height:52rpx;
+margin-left: 33%;
+}
+.a_icon {
+  width:48rpx;
+height:48rpx;
+margin-top:16rpx;
+left:5px;
+position:absolute;
+
+}
+
+.s_icon {
+  width: 48rpx;
+  height: 48rpx;
+  margin-top:1%;
+  margin-left:  1%;
+}
+.inner{
+margin-top: 3%;
+  margin-bottom: 3%;
+  margin-left: 3%;
+  width: 94%;
+  background-color: white;
+  border-radius: 2px;
+}
+.input {
+  font-size: 30rpx;
+  height: 60rpx;
+  width: 90%;
+text-align: center;
+background-color: white;
+}
+.rowPanel+.rowPanel{
+  margin-bottom: 2%;
+}
+.s_panel {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+ font-size:32rpx;
+background-color: rgb(245, 245, 245);
+}
+.panel{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 16%;
+  border-bottom: 1px solid lightgray;
+}
+
+.icon{
+  width: 30%;
+  height: 30%;
+  margin-top: 20%;
+  margin-left: 36%;
+}
+.text{
+  margin-top: 10%;
+  width: 100%;
+  text-align: center;
+  color: #222222
+}
+.MsgPanel{
+  display: flex;
+  flex-direction: column;
+  
+}
+.userInfo{
+  display: flex;
+  flex-direction: row;
+   margin-left: 3%;
+  margin-top: 3%;
+  width: 94%;
+}
+.avatar{
+border-radius:666px; 
+  width: 36px;
+  height: 36px;
+}
+.name{
+  color: #333333;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.imagePanel{
+  display: flex;
+  flex-direction: row;
+  margin-top: 3%;
+  width: 100%;
+}
+.subImagePanel{
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+}
+.img{
+  border-radius: 2px;
+width: 100%;
+height: 100%;
+}
+.img+.img{
+  margin-left: 3%;
+}
+.NumberMask{
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 26px;
+  text-align: center;
+  border-radius: 2px;
+}
+.subMsg{
+  margin-top: 2%;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+.menuPanel{
+  display: flex;
+  flex-direction: row;
+  margin-top: 3%;
+  margin-left: 0%;
+  width: 100%
+}
+.CommentsPanel{
+display: flex;
+flex-direction: column;
+width: 100%;
+  background-color: rgb(248, 248, 248);
+margin-top: 1%;
+font-size:30rpx;
+}
+
+.commenter{
+  margin-right: 1%;
+ color: #57678a;
+}
+.LikeIcon{
+  width: 20px;
+  height: 18px;
+}
+.LikesName{
+  margin-left: 2%;
+  width: 86%;
+
+}
+.comment{
+  margin-top: 1%;
+    margin-bottom:1%;
+  margin-left: 3%;
+  width: 94%;
+  display: inline-block
+}
+.comment+.comment{
+margin-top: 0;
+}
+.CommentName{
+  color: #57678a;
+}
+.InputComment{
+  position: fixed;
+  top: 30%;
+  margin-left: 10%;
+  width: 80%;
+  height: 35%;
+  background-color: white;
+  box-shadow: 0px 0px 10px gray;
+}
+.InputArea{
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 2%;
+}
+.cancel_ok{
+  display: flex;
+  flex-direction: row;
+}
+.cancel,.submitComment{
+  width: 50%;
+}
+.submitComment{
+  color: #0ABA07;
+}
+.hover{
+  opacity: 0.8}
+
+.contentPanel{
+  margin-left: 3%;
+  width: 94%;
+  margin-bottom:2%;
+}
+.ctime{
+  color: gray;
+  width: 70%;
+  font-size: 26rpx;
+}
+.rightPanel{
+  display: flex;
+  flex-direction: column;
+  margin-top: 0%;
+  margin-left: 3%;
+  width: 63%;
+}
+.content{
+  margin-top: 2%;
+  font-size:35rpx;
+word-break:break-all;
+
+}
+.tipNum{
+  color: gray;
+  font-size: 28rpx;
+  margin-left:5%;
+margin-top:-2rpx;
+}
+.share{
+  color: gray;
+  background-color: white;
+}
+button::after{ border: none; } 
+.menuIcon{
+ width:32rpx;
+height:32rpx;
+  margin-left:10%;
+}
+.subMenu{
+  width: 30%;
+  margin-right: 3%;
+}
+.tip{
+  text-align:center;
+color:gray;
+margin-bottom: 2%;
+font-size: 30rpx;
+}
+.label{
+  margin-right: 2%;
+  color: #FF6461;
+text-align: center;
+height: 72rpx;
+width: 72rpx;
+}
+.labelText{
+ margin-top: 8rpx; 
+}
+.MessagePanel{
+width: 100%;
+height: 20%;
+position: relative;
+}
+.bgImage{
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0px;
+z-index: -100
+}
+.MyAvatar{
+  right: 5%;
+  width: 20%;
+  top:15%;
+  height: 70%;
+  box-shadow: 0px 0px 5px #1E90FF;
+  position: absolute
+}
+.msgCenter{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 5%;
+  width: 70%;
+}
+.subPanel{
+  margin-left: 0%;
+  width: 20%;
+  margin-top: 2%;
+}
+.subCenter{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+.MsgIcon{
+width: 28px;
+height: 28px;
+margin-left: 16px
+}
+.MsgText{
+  margin-top: 1%;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  width: 60px;
+}
+.LikesNum{
+  position: absolute;
+  left: 46px;
+  top:-2px;
+  color: white;
+}
+
+
+
+.PanelTitle{
+  display: flex;
+  flex-direction: row;
+  margin-top: 2%;
+  margin-left: 2%;
+}
+.NoticeTitleText{
+  margin-left: 2%;
+  margin-top: 1%;
+  font-size: 32rpx;
+  color: #666666;
+}
+.notice{
+  margin-left: 2%;
+  white-space: pre-wrap;
+  width: 96%;
+  margin-top: 5%;
+  color: #333333;
+  font-size: 32rpx;
+  display: flex;
+  flex-direction: row;
+}
+.noticeIcon{
+  width: 32rpx;
+  height: 32rpx;
+  margin-left:2%;
+}
+.noticeItemText{
+  width: 90%;
+}
+
+.title{
+  font-size: 36rpx;
+  color: #333333;
+  margin-top: 2%;
+  width: 60%;
+  margin-left: 2%
+}
+.watch{
+  margin-bottom: 2%;
+  color: gray;
+  font-size: 28rpx;
+  margin-left: 70%;
+}
+.contact{
+  margin-top: 2%;
+  color: white;
+  background-color: #FF6461;
+  margin-bottom: 2%;
+  border-radius: 3px;
+  margin-left: 40%;
+  font-size: 36rpx;
+  text-align: center;
+}
+.inputArea{
+  width: 96%;
+  margin-left: 2%;
+  margin-top: 2%;
+  border-radius: 2px;
+  border: 1px solid lightgray;
+  font-size: 32rpx;
+}
+.noticePanel{
+  margin-top: 2%;
+  margin-left: 0%;
+  width: 100%;
+background-color: white;
+display: flex;flex-direction: row;
+}
+.picker{
+  width: 90%;
+color: #333333;
+  margin-bottom:2%;
+margin-left: 5%;
+height:48rpx;
+font-size:32rpx;
+
+}

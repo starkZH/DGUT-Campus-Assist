@@ -1,0 +1,126 @@
+page{
+  width: 100%;
+  height: 100%;
+  background: #E9E9E9;
+}
+.scroll{
+  width: 100%;
+  height: 100%;
+}
+
+.panel{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3%;
+  margin-left: 0%;
+  box-shadow:0px 1px 1px gray;
+  background-color: white;
+}
+.img{
+  width: 40%;
+  height: 100%
+}
+.detail{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 100%;
+  margin-left: 5%;
+}
+.name{
+  margin-top: 3%;
+  width: 100%;
+}
+.author,.publish,.isbn{
+  margin-top: 2%;
+  color: gray;
+  width: 100%;
+}
+.menu{
+  display: flex;
+  flex-direction: row;
+  height: 30%;
+  margin-top: 2%;
+  width: 100%;
+}
+.sub{
+  box-shadow: 0px 0px 3px gray;
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  height: 40%;
+  text-align: center;
+}
+.text{
+  text-align: center;
+  margin-left: 3%;
+  margin-top: 1%;
+}
+.control{
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background-color: #EFEFEF;
+  box-shadow: 0px 0px 5px  #1E90FF;
+  border-radius: 6px;
+}
+.last,.next{
+  width: 40%;
+  background-color: white;
+  color: #1E90FF;
+}
+.pagenum{
+  width: 100%;
+  text-align: center;
+  margin-top: 15%;
+  color: darkblue
+}
+.icon{
+  margin-left: 20%;
+  width: 24px;
+  height: 24px;
+}
+.tzpanel{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 25%;
+  height: 35%;
+  left: 5%;
+  width: 90%;
+  box-shadow: 0px 0px 5px #1E90FF;
+  background-color: white;
+}
+.ipanel{
+  display: flex;
+  flex-direction: row;
+  margin-top: 10%;
+}
+.tztitle{
+margin-top: 5%;
+margin-left: 5%;
+}
+.input{
+  box-shadow: 0px 0px 3px gray;
+  width: 20%;
+  margin-left: 30%;
+}
+.tzbutton{
+  margin-top: 10%;
+  margin-left: 20%;
+  width:60%;
+  color: white;
+  background-color: #0ABA07
+}
+.cancel{
+  position: fixed;
+  right: 10%;
+  color: #1E90FF
+}
+.pnpanel{
+  width: 20%;
+  text-align: center;
+}

@@ -1,0 +1,53 @@
+
+<view class='MsgPanel' >
+<view wx:for="{{data}}" class='subMsg columnPanel' >
+<image wx:if="{{item.top!=0}}" class='label' style='position:absolute;right:0;' src='/images/top.png'> </image>
+<view class='userInfo'>
+<image class='avatar' src='{{avatarUrl}}'></image>
+<view class='rightPanel'  bindtap='detail' id="msg{{index}}">
+<label class='name'>{{nickName}}</label>
+<label class='ctime'> {{item.createTime}}</label>
+</view>
+</view>
+
+<view class='contentPanel columnPanel' >
+
+<view class='content' ><label  class='label' ><label class='labelText'>#{{label[item.kind]}}#</label></label><label></label><label  bindtap='detail' id="txt{{index}}">{{item.text}}</label></view>
+<view class='imagePanel' wx:if="{{item.imgUrls.length>0}}">
+
+<image  wx:for="{{item.imgUrls}}" wx:if="{{imgIndex<3}}"  wx:for-item="imageItem" wx:for-index="imgIndex"  bindtap='preview' src='{{imageItem}}' style='width:{{imgSize}}px;height:{{imgSize}}px;' id="img{{index}},{{imgIndex}}"  class='img'>
+</image>
+<view class='NumberMask'  bindtap='preview' id="img{{index}},2" style='width:{{imgSize+2}}px;height:{{imgSize}}px;position:absolute;right:{{windowWidth*0.03}}px' wx:if='{{item.imgUrls.length>3}}'><view style='margin-top:{{imgSize-37}}rpx'>+{{item.imgUrls.length-3}}</view></view>
+</view>
+
+
+<view class='menuPanel'  bindtap='detail' id="com{{index}}">
+<view wx:for="{{item.msginfo}}" id="e{{index}}" wx:for-index='infoIndex' wx:for-item="infoItem" class='subMenu rowPanel' bindtap='{{menuEvent[infoIndex]}}'>
+<image src='/images/like_selected.png'  wx:if="{{infoIndex==1&&item.like_flag==1}}"  class='menuIcon'></image>
+<image src='{{menuIcon[infoIndex]}}' wx:else class='menuIcon'></image>
+<label class='tipNum' wx:if="{{infoIndex==1&&item.like_flag}}" style='color:red;'>{{infoItem}}</label>
+<label class='tipNum' wx:else>{{infoItem}}</label>
+</view>
+
+</view>
+
+
+</view>
+
+<view   class='rowPanel bottomPanel'>
+<button size='mini' class='del' bindtap='del' id='del{{index}}'>删除</button>
+<button size='mini' class='edit' bindtap='edit' id='edit{{index}}'>编辑</button>
+</view>
+
+</view>
+</view>
+
+
+
+<view wx:if="{{showLoading}}" class='loadingTip'>
+<view class='tiptext'>{{loadingTip}}</view>
+</view>
+<view wx:elif='{{data.length==0}}'>
+<image src='/images/404.png' style='margin-left:{{margin_left}}px;' class='icon2_404'></image>
+<view class='tiptext' style='color:gray'>您还没有发布过内容呢~</view>
+</view>

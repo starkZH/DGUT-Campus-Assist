@@ -1,0 +1,36 @@
+<!--背景图片-->
+<image mode="{{imageMode}}" class="bgImage" src="{{bgPath}}"  />
+
+<button class='subpanel' type='mini' bindtap='editCourse'>
+添加课程
+</button>
+<view class='panel'>
+<!--包含 左边的节数和右边的课表 的区域-->
+
+<view class='jieshu'>
+<view style="height:25px;"></view>
+<view wx:for="{{jieshu}}" class='jieshuItem'>{{item}}</view>
+</view>
+<!--课表区域-->
+
+<scroll-view class="main" scroll-x scroll-y >
+<view style='display:flex;flex-direction:row;'>
+<view wx:for="{{kcb}}">
+<view  class="xingqiji">{{week[index]}}</view>
+<view  class="daycourse" wx:for="{{item}}" wx:for-index="idx" wx:for-item="sitem">
+
+<view class='{{cbg[index][idx]}}' style='{{cbgHeight[index][idx]}}' id="course{{index}},{{idx}}" bindtap='edit'>
+<view class="course" style='{{textMargin[index][idx]}}'>{{temp[index][idx]}}@{{kcb[index][idx].spot}}</view>
+</view>
+
+</view>
+
+</view>
+
+
+</view>
+</scroll-view>
+
+
+</view>
+

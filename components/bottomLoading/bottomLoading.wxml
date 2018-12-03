@@ -1,0 +1,3 @@
+<view wx:if="{{showLoading}}" class='loadingTip'>
+<view class='tiptext'>{{loadingTip}}</view>
+</view>

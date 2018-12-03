@@ -1,0 +1,110 @@
+page{
+  width: 100%;
+  height: 100%;
+}
+.scan{
+  margin-top: 5%;
+  margin-left: 10%;
+  width: 80%;
+  color: white;
+  background-color: #43CD80
+}
+.bg{
+width: 100%;
+height: 100%;
+position: fixed;
+top: 0px;
+z-index: -100;
+}
+.main{
+  width: 100%;
+  height: 80%;
+  position: fixed;
+  top:5%;
+}
+.panel{
+  display: flex;
+  flex-direction: row;
+  margin-top: 10%;
+  width: 100%;
+  height:8%;
+ 
+}
+.input{
+  margin-left: 5%;
+  border-radius: 6px;
+  width: 90%;
+  height: 40px;
+   margin-top: 3%;
+   color: #1296db;
+   border-top-left-radius: 20px;
+   border-bottom-left-radius: 20px;
+   border-top-right-radius: 20px;
+   border-bottom-right-radius: 20px;
+  box-shadow: 0px 0px 8px lightgray;
+   text-align: center;
+   background-color: white;
+   font-size: 18px;
+
+}
+.login{
+  color: white;
+  background-color: #1E90FF;
+  margin-left: 5%;
+  width: 90%;
+  margin-top: 15%;
+  position: relative;
+  height: 90rpx;
+  border-radius: 8px;
+  box-shadow: 0px 0px 6px lightgray;
+}
+.loginText{
+  top: 30rpx;
+  text-align: center;
+  width: 100%;
+  color: white;
+  position: absolute;
+  font-size: 36rpx;
+
+}
+.placeholder{
+  color: lightblue
+}
+.hover{
+opacity: 0.7;
+}
+.buttonBg{
+position: absolute;
+top: 0px;
+width: 100%;
+height: 100%;
+
+  border-radius: 8px;
+}
+.text{
+  padding-left: 10%;
+  margin-top: 3%;
+  width: 20%;
+  color: white;
+}
+.infoPanel{
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+width: 90%;
+margin-top: 20%;
+}
+.info{
+ margin-left: 5%;
+  margin-top: 20px;
+  font-size: 18px;
+  color: white;
+  border-bottom: 2px dotted lightblue;
+  width: 90%;
+}
+.button{
+  margin-left: 15%;
+  width: 70%;
+  margin-top: 20%;
+  color: #1E90FF
+}

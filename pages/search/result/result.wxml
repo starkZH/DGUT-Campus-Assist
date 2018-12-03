@@ -1,0 +1,44 @@
+<scroll-view scroll-y class='scroll' scroll-with-animation='true' scroll-top="{{top}}"  >
+<view wx:for="{{showList}}" class='panel'  id="go{{index}}" >
+<view class='detail' id="xijie{{index}}"  bindtap='getbookinfo'  >
+<label class='name'>{{item.Title}}</label>
+<label class='author' >作者：{{item.Author}}</label>
+<label class='publish'>出版社：{{item.Publish}}</label>
+<label class='isbn'>{{item.Isbn}}</label>
+</view>
+<view class='menu'>
+<view class='sub' id="gc{{index}}" bindtap='guancang' >
+<image src="/images/guancang.png" mode='scaleToFill' class='icon' />
+<view class='text'  >馆藏</view>
+</view>
+
+<view class='sub' id="add{{index}}" bindtap='addbook' >
+<image src='/images/addBook.png' mode='scaleToFill' class='icon'  />
+<view class='text'>加入书单</view>
+</view>
+</view>
+</view>
+<view style='height:60px' ></view>
+</scroll-view>
+
+
+<view class='control'>
+<button class='last' bindtap='lastPage'>上一页</button>
+<view  class='pnpanel' bindtap='navToPage' >
+<view class='pagenum'>{{pageindex+1}}/{{pagenum}}</view>
+</view>
+<button class='next' data-offset='1' bindtap='nextPage'>下一页</button>
+</view>
+
+<view class='tzpanel'  wx:if="{{mode}}" >
+<view class='tztitle'>
+<label >请输入跳转的页数</label>
+<label class='cancel' bindtap='hide' >取消</label>
+</view>
+
+<view class='ipanel'>
+<input class='input'  bindinput='input'  />
+<label>/{{pagenum}}</label>
+</view>
+<button bindtap='gotoPage' class='tzbutton' >跳转</button>
+</view>

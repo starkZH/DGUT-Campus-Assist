@@ -1,0 +1,44 @@
+<block wx:if="{{show}}">
+
+<mask bind:hide='hide' maskShow="{{maskShow}}" top='top:0px' />
+<searchPanel bind:search="search" blur_placeholder='童鞋，在这里搜索所有内容哦~' bind:input="input" />
+
+<view style='background-color:white;' class='columnPanel'>
+  <view class='rowPanel' style='margin-top:2%;' wx:for="{{content_labels}}">
+    <view class='subPanel columnPanel' wx:for="{{item}}" bindtap='navigate' id='label{{index}},{{subIndex}}' wx:for-index='subIndex'>
+      <image class='l_icon' src='/images/menu/{{label_icons[index][subIndex]}}'></image>
+      <label class='tiptext'>{{item}}</label>
+    </view>
+  </view>
+</view>
+
+
+<slideshow imgUrls='{{base.imgUrls}}' bind:toPage='toPage' />
+
+<view class='noticePanel' id="notice">
+  <image src='/images/notices.png' class='s_icon'></image>
+  <swiper style='height:52rpx' autoplay="true" duration='200' vertical='true' interval='5000' class='picker'>
+    <swiper-item style='margin-top:2%;' wx:for="{{base.notices}}">
+      <view style='margin-bottom:10rpx;font-size:30rpx;'>{{item}}</view>
+    </swiper-item>
+  </swiper>
+  <image src='/images/noticeDetail.png' class='s_icon'></image>
+</view>
+
+<msg_list data="{{data}}" bind:comment="comment" params="{{params}}" imgSize='{{imgSize}}' />
+
+
+<view wx:if="{{showPanel}}" style='bottom:{{bottom}}px;' id='cp' animation="{{animation}}" class='deliver_c columnPanel'>
+  <label class='title' style='font-size:32rpx'>评论</label>
+  <textarea bindfocus='focus' placeholder='说说你的想法' class='inputArea' fixed='true' bindinput='input_c' bindblur='blur'></textarea>
+  <button class='contact' bindtap='send_comment'>发表评论</button>
+</view>
+
+<loading  showLoading="{{showLoading}}" no_data="{{no_data}}"  />
+
+<button bindtap='new_msg' size='mini' hover-class='hover' class='deliver'>
+  <image src='/images/add.png' class='a_icon'></image>
+  <view class='deliverText'>发布</view>
+</button>
+
+</block>

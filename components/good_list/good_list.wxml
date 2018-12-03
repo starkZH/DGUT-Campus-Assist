@@ -1,0 +1,36 @@
+
+
+<view bindtouchmove='_touchmove' wx:for="{{data}}" class='shopPanel' style='display:flex;flex-direction:row'>
+<view class='left'>
+<image bindtap='preview' wx:if="{{item.imgUrls.length>0}}" src='{{item.imgUrls[0]}}' id='img{{index}}' class='image'></image>
+<image wx:else class='image' src='/images/no_image.png'></image>
+<view wx:if="{{showUser}}" id='user{{index}}' bindtap='personal' class='userInfo' style='display:flex;flex-direction:row'>
+<image class='avatar' src='{{item.avatarUrl}}'></image>
+<view class='columnPanel' style='margin-left:2%'>
+<view class='name'>{{item.name}}</view>
+</view>
+</view>
+</view>
+
+<view class='content'  id='detail{{index}}' bindtap='detail'>
+<view class='title'>{{item.title}}</view>
+<image wx:if="{{item.sell_out==1}}" src='/images/shouqing.png' class='shouqing'></image>
+<view class='labels' style='display:flex;flex-direction:row'>
+<view wx:for="{{item.labels}}" style='color:{{colors[labelIndex]}}' wx:for-index='labelIndex' class='label' wx:for-item="label">{{label}}</view>
+</view>
+<view class='' style=''>
+<!--label class='tipNum'>{{item.watch}}</label><image src='/images/watch.png' class='menuIcon'></image>
+<label class='tipNum' style='margin-right:5%'>{{item.comments.length}}</label><image src='/images/comment.png' class='menuIcon'></image-->
+<view class='pricePanel' style='display:flex;flex-direction:row'>
+<label >二手价  </label><label style='color:red'>　¥</label><label class='price'>{{item.price}}</label>
+<label  wx:if="{{item.discount}}">原价 ¥ {{item.origin_price}}</label>
+<label class='discount' wx:if="{{item.discount}}">{{item.discount}}</label>
+<button size='mini'  wx:if='{{collect_mode}}' class='del' bindtap='_cancel_collect' id='collect{{index}}'>取消收藏</button>
+</view>
+</view>
+</view>
+
+
+</view>
+
+<empty show='{{data.length==0}}' tip='{{tip}}' />

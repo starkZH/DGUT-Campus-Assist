@@ -1,0 +1,72 @@
+<block wx:if="{{show}}">
+<image class="bgImage" src="{{bgPath}}"  />
+<view class='mask'  wx:if="{{maskShow}}" animation="{{animation}}"></view>
+<view class='mainPanel columnPanel' id='main'>
+<!--image class='panelBg' style='height:{{panelBgHeight}}px' src='/images/bg.jpg'></image-->
+<view class='rowPanel weekPanel'>
+第 <view class='weekNum'>{{zhoushu}}</view> 周
+</view>
+<view wx:if="{{todaycourse.length>0}}" class='todaycourse line columnPanel'>
+<view wx:for="{{todaycourse}}" class='single' style='{{bottomStyle[index]}}'>
+<view class='time'> {{todayCourseTime[index]}} </view>
+<view class='singlecourse'> {{item.course}} @ {{item.spot}}</view>
+</view>
+</view>
+<view wx:else class='nocourse' >
+今天没课了~
+</view>
+<view class='noticePanel rowPanel' id="notice">
+<image src='/images/notice.png' class='s_icon'></image>
+<swiper 
+  autoplay="true" duration='200' vertical='true' interval='5000' class='picker'>
+    <swiper-item wx:for="{{base.school_notices}}" >
+      <view style='margin-bottom:10rpx' id='notice{{index}}' bindtap='showNotice' >{{item.title}}</view>
+    </swiper-item>
+</swiper>
+<image src='/images/noticeDetail.png' class='s_icon'></image>
+</view>
+
+</view>
+
+
+
+<!--菜单-->
+
+<view class='panel'  wx:for="{{menuItems}}" >
+<view class='menuName'>{{menuName[index]}}</view>
+<view class='subpanel rowPanel'   wx:for="{{item}}" wx:for-index="menuIndex" wx:for-item="menuItem">
+<view class='subItemPanel rowPanel' wx:for="{{menuItem}}" wx:for-index="subIndex" wx:for-item="subItem" bindtap='{{menuTap[index][menuIndex][subIndex]}}'>
+<image  class='icon' src="{{menuIcons[index][menuIndex][subIndex]}}" />
+<label class='text'>{{subItem}}</label>
+</view>
+<view  wx:if="{{ad_show==1&&base.menuVersion==menuVersion&&menuIndex==2}}" bindtap='job' class='rowPanel jobPanel'><image class='icon' style='margin-top:8rpx;' src='/images/job.png'></image><view  class='jobText'>{{ad_text}}</view></view>
+</view>
+</view>
+
+
+
+<!--消息提醒面板-->
+<view class='notice_detailPanel' wx:if="{{noticeShow}}">
+<view class='titlePanel'>
+<view class='titleText'>
+{{base.school_notices[noticeId].title}}
+</view>
+</view>
+
+<view class='rowPanel' style='margin-left:3%;width:94%;'>
+<image src='/images/last.png' bindtap='changeNotice' data-num='-1' style='left: 2%;' class='m_icon' wx:if="{{noticeId!=0}}"></image>
+<scroll-view scroll-y class='detailPanel'>
+<rich-text bindtap='notice_tap' nodes="{{base.school_notices[noticeId].content}}"></rich-text>
+</scroll-view>
+<image src='/images/next.png' class='m_icon' style='right: 2%;' bindtap='changeNotice'  data-num='1'  wx:if="{{noticeId!=base.school_notices.length-1}}"></image>
+</view>
+
+
+</view>
+<!--ad图片-->
+<view style='width:100%;height:20%;margin-top:-2%;'  wx:if="{{ad_show==1&&base.menuVersion==menuVersion}}">
+<image class='ad' src='{{ad_img}}' ></image>
+</view>
+<image wx:if="{{noticeShow}}" hover-class='hover' style='margin-left:{{marginLeft}}px' src='/images/close.png' class='close' bindtap='hide'></image>
+
+</block>

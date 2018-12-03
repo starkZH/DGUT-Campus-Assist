@@ -1,0 +1,18 @@
+<block  wx:if="{{info.levelExam.details.length>0}}">
+<view  wx:for="{{info.levelExam.details}}" class='panel'>
+<view class='name'>{{item.name}}</view>
+<view class='title'>
+<view wx:for="{{item.title}}" wx:for-item="TitleItem"  class='titleitem'>
+{{TitleItem}}
+</view>
+</view>
+<view  class='detail'>
+<view wx:for="{{item.details}}" wx:for-item="DetailItem" class='detailitem' >
+{{DetailItem}}
+</view>
+</view>
+</view>
+</block>
+<view class='tip' wx:else >
+暂无您的等级考试成绩信息
+</view>

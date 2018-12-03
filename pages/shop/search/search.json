@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "good_list": "/components/good_list/good_list",
+    "loading": "/components/bottomLoading/bottomLoading",
+    "mask": "/components/mask/mask",
+    "searchPanel": "/components/searchPanel/searchPanel"
+  }
+}

@@ -1,0 +1,41 @@
+<view  wx:for="{{data}}" class='shopPanel columnPanel' style=''>
+
+<view class=' rowPanel' style='height:80%;'>
+<view class='left'>
+<image bindtap='preview' src='{{item.imgUrls[0]}}' id='img{{index}}' class='image'></image>
+
+</view>
+
+<view class='content columnPanel'  id='detail{{index}}' bindtap='detail'>
+<view class='title'>{{item.title}}</view>
+<view class='watch'>浏览量：{{item.watch}}</view>
+<view class='labels rowPanel'>
+<view wx:for="{{item.labels}}" style='color:{{colors[labelIndex]}}' wx:for-index='labelIndex' class='label' wx:for-item="label">{{label}}</view>
+</view>
+<view class='' style=''>
+<!--label class='tipNum'>{{item.watch}}</label><image src='/images/watch.png' class='menuIcon'></image>
+<label class='tipNum' style='margin-right:5%'>{{item.comments.length}}</label><image src='/images/comment.png' class='menuIcon'></image-->
+<view class='pricePanel rowPanel'>
+<label >二手价 ¥ </label><label class='price'>{{item.price}}</label>
+<label  wx:if="{{item.discount}}">原价 ¥ {{item.origin_price}}</label>
+<label class='discount'  wx:if="{{item.discount}}">{{item.discount}}</label>
+</view>
+</view>
+ 
+</view>
+</view>
+
+
+<view   class='rowPanel bottomPanel'>
+<button size='mini' class='del' bindtap='del' id='del{{index}}'>删除</button>
+<button size='mini' class='edit' bindtap='edit' id='edit{{index}}'>编辑</button>
+</view>
+</view>
+
+<view wx:if="{{showLoading}}" class='loadingTip'>
+<view class='tiptext'>{{loadingTip}}</view>
+</view>
+<view wx:elif='{{data.length==0}}'>
+<image src='/images/404.png' style='margin-left:{{margin_left}}px;' class='icon_404'></image>
+<view class='tiptext' style='color:gray'>您还没有发布过内容呢~</view>
+</view>

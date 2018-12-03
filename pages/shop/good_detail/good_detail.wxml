@@ -1,0 +1,83 @@
+
+
+<swiper class='swiper' indicator-dots="true"
+  autoplay="true" interval="5000" duration="200">
+  <block wx:for="{{data.imgUrls}}" wx:for-item="imageItem" wx:for-index="imgIndex"  >
+    <swiper-item>
+      <image bindtap='preview' src='{{imageItem}}'  id="img{{imgIndex}}"  class='img'/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class='infoPanel colmnPanel'>
+<image wx:if="{{data.sell_out==1}}" src='/images/shouqing.png' class='shouqing'></image>
+<view style='margin-left:2%' class='columnPanel'>
+<label class='title'>{{data.title}}</label>
+<label class='price'>¥ {{data.price}}</label>
+</view>
+<view class='text' >物品描述：{{data.text}}</view>
+<view class='labels rowPanel'>
+<view wx:for="{{data.labels}}" style='color:{{colors[labelIndex]}}' wx:for-index='labelIndex' class='label' wx:for-item="label">{{label}}</view>
+</view>
+<view class='watch'>浏览量：{{data.watch}}</view>
+</view>
+
+<view class='CommentsPanel'>
+<view class='commentNum'>留言({{data.comments.length}})</view>
+<view class='commentPanel columnPanel'  wx:for="{{data.comments}}">
+<view class='userInfo'>
+<image class='avatar' src='{{item.commenterAvatar}}'></image>
+<view class='rightPanel' style='width:85%;'>
+<label class='name rowPanel'>
+{{item.commenterName}}<label wx:if="{{data.openid==item.commenter}}" class='seller'> 卖家</label>
+<view wx:if="{{item.replyTo}}" class='reply'> 回复 {{item.replyTo}}</view>
+</label>
+
+<label class='ctime'> {{item.commentTime}}</label>
+
+<view style='width:100%;'>
+<view class='content' id='com{{index}}' bindtap='delComment'>{{item.content}}
+</view>
+<view class='menuPanel'>
+<image src='/images/comment.png' id='c{{index}}' bindtap='comment' class='menuIcon'></image>
+</view>
+
+</view>
+</view>
+</view>
+
+</view>
+</view>
+<view style='height:10%'></view>
+
+
+<view class='bottomPanel rowPanel'>
+<view class='singleMenu columnPanel' bindtap='collect' id=''>
+<block  wx:if="{{collected}}" >
+<image  class='menuIcon' src='/images/collect.png' ></image>
+<label  class='tipNum'  style='color:rgb(244, 49, 100);margin-left:-4%;' >已收藏</label>
+</block>
+<block wx:else>
+<image  class='menuIcon' src='/images/un_collect.png' ></image>
+<label  class='tipNum' >收藏</label>
+</block>
+
+</view>
+<button open-type='share' style='margin-left:-3%;' class='singleMenu columnPanel' >
+<image  class='menuIcon' src='/images/share.png' ></image>
+<view  class='tipNum' style='top:33%;position:absolute;' >分享</view>
+</button>
+<view class='singleMenu columnPanel' style='margin-left:-5%;' bindtap='comment' id='--1'>
+<image  class='menuIcon' src='/images/comment.png' ></image>
+<label  class='tipNum' >评论</label>
+</view>
+<button size='amini' class='contact' style='margin-left:6%;' size='mini' bindtap='contact'>联系卖家</button>
+</view>
+
+<view class='mask' bindtap='hide'  wx:if="{{maskShow}}" animation="{{animation}}"></view>
+
+<view wx:if="{{showPanel}}" style='bottom:{{bottom}}px;' id='cp'  animation="{{animation}}" class='deliver columnPanel'>
+<label class='title' style='font-size:32rpx'>评论</label>
+<textarea bindfocus='focus' placeholder='{{placeholder}}' class='inputArea' fixed='true' bindinput='input' bindblur='blur'></textarea>
+<button class='contact' bindtap='send_comment'>发表评论</button>
+</view>

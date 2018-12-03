@@ -1,0 +1,130 @@
+page{
+  width: 100%;
+  height: 100%;
+  background-color: #EFEFEF
+}
+.textPanel{
+  background-color: white;
+  width:100%;margin-left:0;margin-top:0%;height:35%;
+}
+.text{
+  margin-top: 0%;
+  width: 96%;
+  height: 75%;
+  margin-left: 2%;
+}
+.label{
+  color: #FF6461;
+  border-radius: 8px;
+text-align: center;
+font-size: 34rpx;
+height: 49rpx;
+width: 120rpx;
+margin-top: 15rpx;
+margin-left: 5%;
+}
+.upload{
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-bottom: 1px solid lightgray;
+  background-color: white;
+}
+.uploadTip{
+  position: relative;
+  top: -35rpx;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  font-size: 32rpx;
+}
+.imagePanel{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 3%;
+}
+.image{
+  margin-left: 3%;
+  width: 20%;
+  height: 100%;
+  box-shadow: 0px 0px 3px gray;
+}
+.close{
+  width: 40rpx;
+  border-radius: 99px;
+}
+.send{
+  margin-top: 3%;
+  margin-left: 10%;
+  width: 80%;
+  background-color:  #0ABA07;
+  color: white;
+}
+.inputPanel{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 35%;
+  box-shadow: 0px 0px 6px gray;
+  
+}
+
+.login{
+  color: white;
+  background-color: #FF6461;
+  margin-left: 5%;
+  width: 90%;
+  margin-top: 15%;
+  position: relative;
+  height: 90rpx;
+  border-radius: 8px;
+ box-shadow:0 0 10px #FF6461;
+ margin-bottom: 5%;
+}
+.loginText{
+  top: 27rpx;
+  text-align: center;
+  width: 100%;
+  color: white;
+  position: absolute;
+  font-size: 36rpx;
+}
+.buttonBg{
+position: absolute;
+top: 0px;
+width: 100%;
+height: 100%;
+  border-radius: 5px;
+ 
+}
+.hover{
+opacity: 0.7;
+}
+.kindPanel{
+  margin-top: 3%;
+background-color: white;
+font-size: 34rpx;
+height: 80rpx;
+border-bottom: 1px solid lightgray;
+border-top: 1px solid lightgray;
+}
+.kindText{
+  color: gray;
+  margin-left: 3%;
+margin-top:20rpx;
+}
+.kindText+.kindText{
+  margin-left: 5%;
+}
+.jiange{
+  height: 20px;
+  display: inline-block;
+  color: gray;
+  border-bottom: 1px solid lightgray;
+  font-size: 15px;
+  text-align: center;
+  width: 100%;
+  margin-top: 2%;
+}

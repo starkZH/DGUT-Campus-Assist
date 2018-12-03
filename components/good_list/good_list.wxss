@@ -1,0 +1,233 @@
+page{
+  width: 100%;
+  height: 100%;
+}
+.searchTip{
+  color: #333333;
+  
+}
+.del{
+  background-color: #FF6461;
+  color: white;
+  margin-right: 2%;
+  margin-bottom: 1%;
+}
+.deliver{
+  position: fixed;
+  right: 0px;
+  bottom: 8%;
+  border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  background-color: #FF6461;
+  color: white;
+  font-size: 36rpx;
+  width: 180rpx;
+  text-align: right;
+  box-shadow: 0 0 5px #FF6461;
+  height:80rpx;
+
+}
+.hover{
+  opacity: 0.8
+}
+.input {
+  margin-top: 6rpx;
+  margin-bottom: 6rpx;
+  height: 60rpx;
+  width: 90%;
+margin-left: 2%;
+
+}
+.panel {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #6e6e6e;
+  width: 94%;
+  margin-left: 3%;
+  z-index: 86;
+ border-radius: 17rpx;
+ font-size:32rpx;
+margin-top:5%;
+margin-bottom: 5%;
+}
+.a_icon {
+  width:48rpx;
+height:48rpx;
+margin-top:16rpx;
+left:5px;
+position:absolute;
+}
+.icon_404{
+  margin-top: 20%;
+  width:191rpx;
+height:128rpx;
+}
+.icon {
+  width: 48rpx;
+  height: 48rpx;
+  margin-left:  1%;
+  margin-top: 10rpx;
+}
+.scroll{
+  overflow: scroll;
+  width: 100%;
+  
+background-color:white;
+z-index: 1000
+}
+.scroll_kind{
+  z-index: 1000
+}
+.menu{
+  display: flex;
+  flex-direction: row;
+}
+.menuIcon{
+ width:36rpx;
+height:36rpx;
+  margin-left:2%;
+  float: right;
+  margin-top: 2%;
+}
+.avatar{ 
+  width: 20px;
+  height: 20px;
+border-radius:999px;
+  border: 2px solid white;
+  background-color: white;
+}
+.menuItem{
+  font-size: 30rpx;
+  width: 150rpx;
+  text-align: center;
+  height:65rpx;
+margin-top:24rpx;
+color: #333333;
+margin-left: 1%
+}
+.title{
+  font-size: 30rpx;
+  color: #333333;
+  margin-left: 5%;
+  margin-top: 5%;
+  font-weight: bold;
+}
+.confirm{
+  color: white;
+  background-color: #FF6461;
+}
+.more{
+  width: 64rpx;
+  height: 64rpx;
+  background-color:white;
+margin-top:16rpx;
+margin-left: 1%;
+z-index:999;
+
+}
+
+.itemText{
+  height:63rpx;
+  width:130rpx;
+
+}
+.shopPanel{
+  border-bottom: 1px solid rgb(240, 240, 240);
+  height: 20%;
+  background-color: white;
+}
+.image{
+  margin-left: 2%;
+  margin-top: 2%;
+  width: 100%;
+  height: 75%;
+  border-radius: 2px;
+}
+.text{
+  color: gray;
+  font-size: 32rpx;
+height:50%;
+
+}
+.content{
+  margin-left: 2%;
+  width:73%;
+display: flex;
+flex-direction: column;
+}
+.tipNum{
+  color: gray;
+  font-size: 32rpx;
+  margin-left:3%;
+float: right;
+margin-right:2%;  
+margin-top:1%;
+
+}
+.pricePanel{
+  font-size: 25rpx;
+  color: gray;
+  margin-left: 2%;
+  margin-top: 1%;
+}
+.price{
+  color: red;
+  font-size: 34rpx;
+  float: left;
+  margin-left: 2%;
+  margin-right: 10%;
+  margin-top:-6rpx;
+}
+.ctime{
+  color: gray;
+  width: 100%;
+  font-size: 28rpx;
+}
+.name{
+  color: #444444;
+  font-size: 24rpx;
+  font-weight: bold;
+margin-top:22rpx;
+}
+.userInfo{
+position: relative;
+top: -20rpx;
+left: 5%;
+}
+.left{
+  margin-top: 2%;
+  margin-left: 2%;
+  width:22%
+}
+.labels{
+  height: 36%;
+  margin-left: 2%;
+  margin-top: 8%;
+  margin-bottom:2%;
+}
+.label{
+  color: red;
+  border: 1px solid ;
+  font-size: 26rpx;
+  margin-right: 5%;
+  height: 35rpx;
+  text-align: center;
+  border-radius: 2px;
+  padding:1%;
+}
+.discount{
+  color: 	#FF6461;
+  background-color: #fdd3d1;
+  border: 1px solid #fdd3d1;
+  border-radius: 2px;
+  margin-left: 8%;
+  width:90rpx;
+text-align:center;
+height:33rpx;
+
+}
+.tiptext{
+font-size:32rpx;
+margin-top:16rpx;
+text-align:center;
+}

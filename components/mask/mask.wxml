@@ -1,0 +1,1 @@
+<view class='mask' style='{{top}}' bindtap='_hide'  wx:if="{{maskShow}}" animation="{{animation}}"></view>

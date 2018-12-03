@@ -1,0 +1,37 @@
+<block wx:if="{{show}}">
+<searchPanel bind:search="search" id='keyword' blur_placeholder="搜索二手内容" bind:input="input"   />
+
+<slideshow id='slide' imgUrls='{{base.shop_imgUrls}}' indicator_dots='false' bind:toPage='toPage' />
+
+<view class='rowPanel' id='kindPanel'>
+<scroll-view scroll-x scroll-y class='scroll'   >
+<view class='menu' style='width:{{(150*9)}}rpx'>
+<view class='menuItem' id='menu{{index}}' id='menu{{index}}' wx:for="{{kind}}" bindtap='getGoods'>
+<view wx:if='{{index==menuIndex}}'  style='color:	#FF6461;border-bottom:1px solid;' class='itemText'>{{item}}</view>
+<view class='itemText' wx:else >{{item}}</view>
+</view>
+</view>
+</scroll-view>
+</view>
+<!--固定的分类栏-->
+<scroll-view scroll-x scroll-y class='scroll' style='position:fixed;top:0px;' wx:if="{{show_fix}}" >
+<view class='menu' style='width:{{(150*9)}}rpx'>
+<view class='menuItem' id='menu{{index}}' id='menu{{index}}' wx:for="{{kind}}" bindtap='getGoods'>
+<view wx:if='{{index==menuIndex}}'  style='color:	#FF6461;border-bottom:1px solid;' class='itemText'>{{item}}</view>
+<view class='itemText' wx:else >{{item}}</view>
+</view>
+</view>
+</scroll-view>
+
+
+
+<good_list onTouchMove="onPageScroll" showUser='true' tip="哎呀，没有商品了~" data="{{data}}" />
+
+<loading  showLoading="{{showLoading&&data.length>3}}" no_data="{{no_data}}" />
+
+<button bindtap='new_good' size='mini' hover-class='hover' class='deliver'>
+<image src='/images/add.png' class='a_icon'></image>
+<view class='deliverText'>发布</view>
+</button>
+
+</block>

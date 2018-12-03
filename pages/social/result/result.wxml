@@ -1,0 +1,10 @@
+<msg_list data="{{data}}" bind:comment="comment" imgSize='{{imgSize}}' />
+
+
+<view wx:if="{{showLoading}}" >
+<loading  showLoading="{{showLoading}}" no_data="{{no_data}}"  />
+</view>
+<view wx:elif='{{data.length==0}}'>
+<image src='/images/nodata.png' style='margin-left:{{margin_left}}px;' class='icon_404'></image>
+<view class='tiptext' style='color:gray'>没有找到相关内容哦~</view>
+</view>

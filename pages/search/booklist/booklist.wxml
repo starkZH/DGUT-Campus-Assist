@@ -1,0 +1,19 @@
+
+<view wx:for="{{booklist}}" class='panel'  id="go{{index}}" >
+<view class='detail' id="xijie{{index}}"  bindtap='getbookinfo'  >
+<label class='name'>{{item.Title}}</label>
+<label class='author' >作者：{{item.Author}}</label>
+<label class='publish'>出版社：{{item.Publish}}</label>
+<label class='isbn'>{{item.Isbn}}</label>
+</view>
+<view class='menu'>
+<view class='sub' id="gc{{index}}" bindtap='guancang' >
+<image src="/images/guancang.png" mode='scaleToFill' class='icon' />
+<view class='text'  >馆藏</view>
+</view>
+<view class='sub' id="del{{index}}" bindtap='delbook' >
+<image src="/images/del.png" mode='scaleToFill' class='icon' />
+<view class='text'>移除</view>
+</view>
+</view>
+</view>

@@ -1,0 +1,9 @@
+<input  class="input" value='{{info}}' bindinput='input' placeholder='请输入您的班级，如2017电气4班'></input>
+
+<view class='pipei' >
+<view class='pp' wx:for="{{znpp}}" id="class{{index}}" bindtap='chooseClass'>
+{{item}}
+</view>
+</view>
+
+<button class='binding' bindtap='binding' ><view class='loginText'>获取班级课表</view></button>

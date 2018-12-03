@@ -1,0 +1,17 @@
+{
+"window": {
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "小程序",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "dark",
+  "enablePullDownRefresh": false
+},
+"usingComponents": {
+  "FixedMenu": "/components/FixedMenu/FixedMenu",
+  "shop": "/pages/shop/shop",
+  "social": "/pages/social/social",
+  "me": "/pages/me/me",
+  "home": "/pages/index/home/home"
+}
+}

@@ -1,0 +1,12 @@
+<view class='base'>
+<image src='/images/bg.jpg' class='bgImage'></image>
+<view class='name'>{{info.resultList[0].reader_name}}</view>
+<view class='count'>您总共借过 {{info.resultList.length}} 本书</view>
+</view>
+<view class='list'>
+<view wx:for="{{info.resultList}}" class='item'>
+<view class='bookName'>{{item.book_name}}</view>
+<view class='bookNumber'>{{item.book_number}}</view>
+<view class='date'>{{item.operate_date}}</view>
+</view>
+</view>

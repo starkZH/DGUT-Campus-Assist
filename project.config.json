@@ -1,0 +1,252 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.2.5",
+	"appid": "wxe64bfb4812390085",
+	"projectname": "DGUTsch-Mobile",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 35,
+			"list": [
+				{
+					"id": 0,
+					"name": "选择班级",
+					"pathName": "pages/index/kcb/kcb",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "添加考试",
+					"pathName": "pages/add_exam/add_exam",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "设置",
+					"pathName": "pages/settings/setting",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "关于",
+					"pathName": "pages/about/about",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "生成激活码",
+					"pathName": "pages/makeCode/makeCode",
+					"query": ""
+				},
+				{
+					"id": 7,
+					"name": "图书详情",
+					"pathName": "pages/search/detail/detail",
+					"query": "b=QQVIJAG0LJ&title=（测试标题）"
+				},
+				{
+					"id": -1,
+					"name": "图书馆",
+					"pathName": "pages/search/search",
+					"query": ""
+				},
+				{
+					"id": 7,
+					"name": "图书搜索结果",
+					"pathName": "pages/search/result/result",
+					"query": "kw=spring"
+				},
+				{
+					"id": -1,
+					"name": "登录教务系统",
+					"pathName": "pages/loginJW/loginJW",
+					"query": "b=QQVIJAG0LJ&title=（测试标题）"
+				},
+				{
+					"id": -1,
+					"name": "我的成绩",
+					"pathName": "pages/myscore/myscore",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "发现",
+					"pathName": "pages/function/function",
+					"query": ""
+				},
+				{
+					"id": 12,
+					"name": "发布消息",
+					"pathName": "pages/social/makeMsg/makeMsg",
+					"query": ""
+				},
+				{
+					"id": 12,
+					"name": "全部课程",
+					"pathName": "pages/allCourse/allCourse",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的选课",
+					"pathName": "pages/myChosenCourse/myChosenCourse",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "等级考试",
+					"pathName": "pages/LevelExam/LevelExam",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "饭卡消费",
+					"pathName": "pages/EcardFare/EcardFare",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "借书记录",
+					"pathName": "pages/BorrowBooks/BorrowBooks",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "社交平台",
+					"pathName": "pages/social/social",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "绑定认证系统",
+					"pathName": "pages/loginJW/loginJW",
+					"query": ""
+				},
+				{
+					"id": 20,
+					"name": "贴子详情",
+					"pathName": "pages/social/momentDetail/momentDetail",
+					"query": "id=21"
+				},
+				{
+					"id": -1,
+					"name": "校园二手",
+					"pathName": "pages/shop/shop",
+					"query": ""
+				},
+				{
+					"id": 21,
+					"name": "商品详情",
+					"pathName": "pages/shop/good_detail/good_detail",
+					"query": "id=5018"
+				},
+				{
+					"id": -1,
+					"name": "发布商品",
+					"pathName": "pages/shop/deliver_good/deliver_good",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "校内圈",
+					"pathName": "pages/social/social",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/me/me",
+					"query": ""
+				},
+				{
+					"id": 26,
+					"name": "我发布的",
+					"pathName": "pages/me/my_moment/my_moment",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的二手",
+					"pathName": "pages/me/my_goods/my_goods",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的消息",
+					"pathName": "pages/me/my_msg/my_msg",
+					"query": ""
+				},
+				{
+					"id": 29,
+					"name": "搜索结果",
+					"pathName": "pages/social/result/result",
+					"query": "type=1&keyword=213"
+				},
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "广告",
+					"pathName": "pages/index/job/job",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "personal goods",
+					"pathName": "pages/shop/personal/personal",
+					"query": "openid=o9aYh0ciBy-7qTJn7dBQYj6WrUAc"
+				},
+				{
+					"id": -1,
+					"name": "商品搜索",
+					"pathName": "pages/shop/search/search",
+					"query": "keyword=一口价"
+				},
+				{
+					"id": -1,
+					"name": "更新商品",
+					"pathName": "pages/shop/deliver_good/deliver_good",
+					"query": "edit=true"
+				},
+				{
+					"id": -1,
+					"name": "收藏列表",
+					"pathName": "pages/me/collection/collection",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "圣诞帽",
+					"pathName": "pages/me/cap/cap"
+				}
+			]
+		}
+	}
+}

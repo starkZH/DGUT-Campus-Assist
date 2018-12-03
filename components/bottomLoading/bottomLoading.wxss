@@ -1,0 +1,14 @@
+.loadingTip{
+  text-align: center;
+  background-color: rgb(250,250,250);
+  color: gray;
+  height: 64rpx;
+  display: inline-block;
+  width: 100%;
+}
+.tiptext{
+font-size:30rpx;
+margin-top:16rpx;
+text-align:center;
+color: gray;
+}

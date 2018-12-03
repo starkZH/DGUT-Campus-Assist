@@ -1,0 +1,20 @@
+<view  class='textPanel'>
+<view style='height:5%'></view>
+<textarea placeholder='这一刻的想法...' class='text' value='{{text}}' bindinput='input'>
+</textarea>
+</view>
+
+
+<upload bind:imgs="get_imgs" images="{{images}}"  />
+
+<view class='kindPanel rowPanel' >
+<label class='kindText'>分类</label>
+<picker class='kindText' bindchange='change' style='width:60%;' range="{{range}}">
+<label class='label'>{{range[r_index]}}</label>
+</picker>
+</view>
+
+<view class='login' bindtap='send' hover-class='hover'>
+
+<view class='loginText'>发布</view>
+</view>

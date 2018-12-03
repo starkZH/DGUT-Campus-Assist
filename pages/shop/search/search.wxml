@@ -1,0 +1,39 @@
+<searchPanel bind:search="search"  blur_placeholder="搜索二手内容" bind:input="input"   />
+
+<view class='rowPanel filter'>
+<view class='sub rowPanel' id='menu{{index}}' bindtap='tapMenu' wx:for="{{menu}}">
+<block wx:if='{{index==menuIndex}}' >
+<view style='color:	#FF6461;' class='itemText'>{{item.text}}
+</view>
+<image wx:if="{{item.select}}" class='icon' src='{{item.select}}'></image>
+</block>
+<block  wx:else >
+<view class='itemText'>{{item.text}}</view>
+<image wx:if="{{item.un_select}}" class='icon' src='{{item.un_select}}'></image>
+</block>
+</view>
+</view>
+
+<view style='width:100%;background-color:white;position:fixed;z-index:100;' id='filter'>
+<view class='price' wx:if="{{showList}}" style='{{css}}' animation="{{animation}}" >
+<view bindtap='tapSub' id='sub{{index}}' class='rowPanel' wx:for="{{subMenu}}">
+<block wx:if='{{index==subMenuIndex}}' >
+<view style='color:	#FF6461;' class='itemText s_item'>{{item}}
+</view>
+<image  class='icon s_icon' src='/images/select.png'></image>
+</block>
+<block  wx:else >
+<view class='itemText s_item'>{{item}}</view>
+</block>
+<view class='rowPanel' wx:if="{{index==3}}" >
+<input type='number' placeholder='最低价' maxlength='6' class='fil_price' id='min' bindinput='input' /><label>-</label><input bindinput='input' class='fil_price' maxlength='6' type='number'  placeholder='最高价' id='max' />
+<button size='mini' id='submit' class='submit'  >确定</button>
+</view>
+</view>
+</view>
+</view>
+
+<good_list showUser='true'  data="{{data}}"   />
+<mask bind:hide="hideMenu" data-hide='1' maskShow='{{maskShow}}' top="{{margin_top}}" />
+
+<loading  showLoading="{{showLoading}}" no_data="{{no_data}}" />

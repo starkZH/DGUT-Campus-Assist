@@ -1,0 +1,70 @@
+
+<view class='info'>
+<label class="titlePanel">知行课程</label>
+<view wx:if="{{info.zhixing.info.list==0}}" class='tip'>
+暂无您的选课信息
+</view>
+<view class='subPanel' wx:for="{{info.zhixing.info.list}}">
+<view class='subInfo'>
+<label class='title'>学期：</label>
+<label class='content'>{{item.year_term}}</label>
+</view>
+<view class='subInfo'>
+<label class='title'>课程：</label>
+<label class='content'>{{item.class_name}}</label>
+</view>
+<view class='subInfo'>
+<label class='title'>校区：</label>
+<label class='content'>{{item.campus}}</label>
+</view>
+<view class='subInfo'>
+<label class='title'>授课教师：</label>
+<label class='content'>{{item.name}}</label>
+</view>
+<view class='subInfo'>
+<label class='title'>上课时间：</label>
+<label class='content'>{{item.date_address[0]}}</label>
+</view>
+<view class='subInfo'>
+<label class='title'>学分：</label>
+<label class='content'>{{item.point}}</label>
+</view> 
+<view class='subInfo'>
+<label class='title'>成绩：</label>
+<label class='content'>{{item.score}}</label>
+</view>
+<view class='subInfo'>
+<label class='title'>获得学分：</label>
+<label class='content'>{{item.has_point}}</label>
+</view>
+<view class='subInfo'>
+<label class='title'>申请状态：</label>
+<label class='content'>{{statusText[item.status]}}</label>
+</view>
+</view>
+</view>
+
+<view class='info'>
+<label class="titlePanel">体育课程</label>
+<view wx:if="{{info.tiyu.info.length==0}}" class='tip'>
+暂无您的选课信息
+</view>
+<view class='subPanel' wx:for="{{info.tiyu.info.list}}">
+<view class='subInfo'>
+<label class='title'>学期：</label>
+<label class='content'>{{item.year_term}}</label>
+</view>
+<view class='subInfo'>
+<label class='title'>课程：</label>
+<label class='content'>{{item.course_teacher}}</label>
+</view>
+<view class='subInfo'>
+<label class='title'>上课信息：</label>
+<label class='content'>{{item.course_detail}}</label>
+</view>
+<view class='subInfo'>
+<label class='title'>状态：</label>
+<label class='content'>{{tyStatusText[item.status]}}</label>
+</view>
+</view>
+</view>

@@ -1,0 +1,5 @@
+<view wx:if="{{show}}">
+<image src='/images/404.png' style='margin-left:{{margin_left}}px;' class='icon_404'></image>
+<view class='tiptext' style='color:gray'>{{tip}}</view>
+</view>
+

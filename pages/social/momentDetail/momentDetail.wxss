@@ -1,0 +1,373 @@
+page{
+  width: 100%;
+  height: 100%;
+  background-color: #EFEFEF
+}
+button::after{ border: none; } 
+.contact{
+  margin-top: 2%;
+  color: white;
+  background-color: #FF6461;
+  margin-bottom: 2%;
+  border-radius: 3px;
+  margin-left: 40%;
+  font-size: 36rpx;
+  text-align: center;
+}
+.deliver{
+  position: fixed;
+  bottom: 0px;
+  background-color: white;
+width: 100%;
+z-index: 999;
+}
+
+.title{
+  font-size: 36rpx;
+  color: #333333;
+  margin-top: 2%;
+  width: 60%;
+  margin-left: 2%
+}
+.panel{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 16%;
+  border-bottom: 1px solid lightgray;
+}
+.subpanel{
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.icon{
+  width: 30%;
+  height: 30%;
+  margin-top: 20%;
+  margin-left: 36%;
+}
+.text{
+  margin-top: 10%;
+  width: 100%;
+  text-align: center;
+  color: #222222
+}
+.MsgPanel{
+  display: flex;
+  flex-direction: column;
+background-color: white;  
+}
+.userInfo{
+  display: flex;
+  flex-direction: row;
+   margin-left: 3%;
+  margin-top: 3%;
+  width: 94%;
+}
+.avatar{
+border-radius:666px; 
+  width: 36px;
+  height: 36px;
+}
+.name{
+  color: #57678a;
+  font-size: 15px;
+}
+.imagePanel{
+  margin-top: 3%;
+  width: 100%;
+}
+.subImagePanel{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.subComment{
+  background-color: rgb(248, 248, 248);
+  width:100%;
+border-radius: 3px;
+}
+.img{
+  margin-left: 0%;
+  width: 100%;
+  margin-top: 3%;
+  
+}
+.NumberMask{
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 32px;
+  text-align: center;
+}
+.subMsg{
+  width: 100%;
+  background-color: white;
+}
+.singleComment{
+  margin-left: 3%;
+  width: 96%;
+  margin-top: 1%;
+}
+.commentPanel{
+  width: 100%;
+  margin-bottom: 2%;
+  border-top: 1px solid #EFEFEF;
+}
+.menuPanel{
+  float:right;
+  flex-direction: row;
+  margin-top: 3%;
+  margin-left: 0%;
+  width: 100%;
+  margin-bottom: 2%;
+}
+.CommentsPanel{
+display: flex;
+flex-direction: column;
+width: 100%;
+background-color: white;
+font-size:32rpx;
+border-top: 1px solid #EFEFEF;
+margin-top: 3%
+}
+
+.commenter{
+  margin-right: 1%;
+ color: #57678a;
+}
+.LikeIcon{
+  width: 20px;
+  height: 18px;
+}
+.LikesName{
+  margin-left: 2%;
+  width: 86%;
+
+}
+.comment{
+  margin-top: 1%;
+  margin-left: 3%;
+  width: 94%;
+  display: inline-block
+}
+.CommentName{
+  color: #57678a;
+}
+.InputComment{
+  position: fixed;
+  top: 30%;
+  margin-left: 10%;
+  width: 80%;
+  height: 35%;
+  background-color: white;
+  box-shadow: 0px 0px 10px gray;
+}
+.inputArea{
+  width: 96%;
+  margin-left: 2%;
+  margin-top: 2%;
+  border-radius: 2px;
+  border: 1px solid lightgray;
+  font-size: 32rpx;
+}
+.cancel_ok{
+  display: flex;
+  flex-direction: row;
+}
+.cancel,.submitComment{
+  width: 50%;
+}
+.submitComment{
+  color: #0ABA07;
+}
+.hover{
+  background-color: #EFEFEF;
+}
+.mask{
+  position: fixed;
+  top:0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5)
+}
+.contentPanel{
+  margin-left: 3%;
+  width: 94%;
+ 
+}
+.tiptext{
+  font-size: 15px;
+  margin-top: 12px;
+}
+.ctime{
+  color: gray;
+  width: 99%;
+  font-size: 30rpx;
+}
+.rightPanel{
+  display: flex;
+  flex-direction: column;
+  margin-top: 0%;
+  margin-left: 3%;
+  width: 69%;
+}
+.content{
+  margin-top: 2%;
+  word-break:break-all;
+font-size: 35rpx;
+}
+.tipNum{
+  color: gray;
+  font-size: 30rpx;
+  margin-right:3%;
+text-align: center;
+width: 100rpx;
+}
+.singleMenu{
+  margin-top: 1%;
+background-color: white;
+width: 100rpx;
+}
+.singleMenu+.singleMenu{
+  margin-left: 3%;
+}
+.bottomPanel{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background-color: white;
+  border-top: 1px solid lightgray;
+height: 8%;
+}
+.menuIcon{
+ width:42rpx;
+height:42rpx;
+ margin-right:2%;
+float:right;
+margin-left:29rpx;
+}
+.subMenu{
+  width: 30%;
+  margin-right: 3%;
+}
+.tip{
+  text-align:center;
+color:gray;
+margin-top:2%;
+margin-bottom: 2%;
+}
+.label{
+  color: #1e90ff;
+  border-radius: 8px;
+text-align: center;
+width: 64rpx;
+height: 64rpx;
+margin-right: 2%;
+}
+.commentNum{
+  font-size: 32rpx;
+  margin-left: 3%;
+  margin-top: 3%;
+  background-color: white;
+  height: 64rpx;
+}
+.labelText{
+ margin-top: 8rpx; 
+}
+.MessagePanel{
+width: 100%;
+height: 20%;
+position: relative;
+}
+.bgImage{
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0px;
+z-index: -100
+}
+.MyAvatar{
+  right: 5%;
+  width: 20%;
+  top:15%;
+  height: 70%;
+  box-shadow: 0px 0px 5px #1E90FF;
+  position: absolute
+}
+.msgCenter{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 5%;
+  width: 70%;
+}
+.subCenter{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+.MsgIcon{
+width: 28px;
+height: 28px;
+margin-left: 16px
+}
+.MsgText{
+  margin-top: 1%;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  width: 60px;
+}
+.LikesNum{
+  position: absolute;
+  left: 46px;
+  top:-2px;
+  color: white;
+}
+
+
+
+
+.noticePanel{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+  border-radius: 8px;
+  margin-left: 5%;
+  width: 90%;
+box-shadow: 0px 0px 10px gray
+}
+.PanelTitle{
+  display: flex;
+  flex-direction: row;
+  margin-top: 2%;
+  margin-left: 2%;
+}
+.NoticeTitleText{
+  margin-left: 2%;
+  margin-top: 1%;
+  font-size: 32rpx;
+  color: #666666;
+}
+.notice{
+  margin-left: 2%;
+  white-space: pre-wrap;
+  width: 96%;
+  margin-top: 5%;
+  color: #333333;
+  font-size: 32rpx;
+  display: flex;
+  flex-direction: row;
+}
+.noticeIcon{
+  width: 32rpx;
+  height: 32rpx;
+  margin-left:2%;
+}
+.noticeItemText{
+  width: 90%;
+}

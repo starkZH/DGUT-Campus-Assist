@@ -1,0 +1,267 @@
+/**index.wxss**/
+page{
+	width: 100%;
+	height: 100%;
+}
+
+.course{
+  white-space: pre-wrap;
+  margin-top: 25px;
+  width:58px;
+  font-size:12px;
+  font-style: "margin:10px";
+  line-height: 20px;
+  color:white;
+ 
+}
+.panel{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+margin-top: 3%;
+}
+
+.today{
+  position: fixed;
+  top:0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(1, 1, 1, 0.95);
+  display: flex;
+  flex-direction: column;
+}
+.dateInfo{
+  display: flex;
+  flex-direction: row;
+}
+.date{
+  color: white;
+  font-size: 30px;
+  margin-left: 8%;
+  margin-top: 10%;
+}
+.whatday{
+  margin-left: 6%;
+  color: white;
+  font-size: 18px;
+  margin-top: 13%;
+}
+.todaycourse{
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin-top: 10%;
+}
+.single{
+  margin-top: 4%;
+  margin-left: 5%;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+}
+.singlecourse{
+width: 80%;
+}
+.time{
+width: 20%;
+margin-left: 3%;
+}
+.nocourse{
+  color: white;
+  margin-left:10%;
+  margin-top: 20%;
+}
+.allcourse{
+  position: fixed;
+  bottom: 5%;
+  right: 6%;
+  width: 32px;
+  height:18px;
+}
+.weather{
+  margin-left: 8%;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  width: 90%;
+}
+.weaIcon{
+width: 48px;
+height: 40px;
+}
+.winfo{
+margin-left: 4%;
+color: #CCCCCC
+}
+.regetRight{
+  border: 1px solid springgreen;
+  text-align: center;
+  font-size: 18px;
+  color: springgreen;
+  width: 130px;
+  border-radius: 8px;
+}
+
+.cbg_common{
+  margin-left: 0px;
+  text-align: center;
+  border-radius: 2px;
+  width:60px;
+  display: inline-block;
+}
+.cbg_0{
+  
+  background-color:rgba(255,127,0,0.7);
+  
+}
+.cbg_1{
+  
+  background-color:rgba(58,95,205,0.7);
+  
+}
+.cbg_2{
+  
+  background-color:rgba(153,50,204,0.7);
+  
+}
+.cbg_3{
+  
+  background-color:rgba(255,64,64,0.7);
+  
+}
+.cbg_4{
+  
+  background-color:rgba(10, 186, 7,0.7);
+  
+}
+.cbg_5{
+  
+  background-color:rgba(42,92,170,0.7);
+  
+}
+.cbg_6{
+  
+  background-color:rgba(0,117,94,0.7);
+  
+}
+.cbg_7{
+  
+  background-color:rgba(222,49,99,0.7);
+  
+}
+.cbg_8{
+  
+  background-color:rgba(0,120,80,0.7);
+  
+}
+.cbg_9{
+  
+  background-color:rgba(138,0,96,0.7);
+  
+}
+.cbg_10{
+  
+  background-color:rgba(205,38,38,0.7);
+  
+}
+.cbg_11{
+  
+  background-color:rgba(81,81,81,0.7);
+  
+}
+.cbg_12{
+  
+  background-color:rgba(205,51,51,0.7);
+  
+}
+
+
+
+
+
+.main{
+  
+overflow: scroll;
+height: 100%;
+
+}
+.classInfo{
+  margin-top: 2px;
+  position: relative;
+  top: 2px;
+}
+.xingqi{
+
+  display: flex;
+  flex-direction: row;
+width: 480px;
+}
+.xingqiji{
+  color: #0A0A0A;
+  padding-left: 0px;
+  width:60px; 
+  height: 22px;
+  text-align: center;
+  display: inline-block;
+}
+.daycourse{
+  display: flex;
+  flex-direction: column;
+
+}
+.jieshu{
+  display: flex;
+  flex-direction: column;
+  height: 700px;
+  text-align: center;
+}
+.jieshuItem{
+  height:50px;
+  border:solid 1px #C0C0C0;
+  margin-top:0px;
+  color: #0A0A0A
+}
+
+.bgImage{
+position: fixed;
+top:0px;
+height: 100%;
+width:100%;
+z-index:-10
+}
+.reget{
+  color:#1296db;
+  background-color: white;
+
+}
+.xiaoli{
+  width: 36px;
+  height: 36px;
+  margin-top: 2px;
+  margin-left: 2px;
+}
+.subpanel{
+  width: 200rpx;
+  float:right;
+margin:2%;
+border-radius: 666px;
+background-color: #FF6461;
+box-shadow: 0 0 3px #FF6461;
+color: white;
+font-size: 30rpx;
+}
+.icon{
+  width: 48rpx;
+  height: 48rpx;
+}
+.text{
+  margin-left: 2%;
+}
+.addText{
+  color: white;
+  margin-left: 2%;
+  font-size: 32rpx;
+  margin-top:6rpx;
+
+}

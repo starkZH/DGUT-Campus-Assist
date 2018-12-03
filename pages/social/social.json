@@ -1,0 +1,9 @@
+{"usingComponents": {
+    "slideshow": "/components/slideshow/slideshow",
+    "mask": "/components/mask/mask",
+    "msg_list": "/components/msg_list/msg_list",
+    "loading": "/components/bottomLoading/bottomLoading",
+    "searchPanel": "/components/searchPanel/searchPanel"
+  },
+  "component": true
+  }

@@ -1,0 +1,16 @@
+{
+  "navigationBarBackgroundColor": "#FF6461",
+  "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "莞工校园二手",
+  "backgroundColor": "#FF6461",
+  "backgroundTextStyle": "light",
+  "enablePullDownRefresh":false,
+  "usingComponents": {
+    "good_list": "/components/good_list/good_list",
+    "slideshow": "/components/slideshow/slideshow",
+    "loading": "/components/bottomLoading/bottomLoading",
+    "searchPanel": "/components/searchPanel/searchPanel",
+    "empty": "/components/empty/empty"
+  },
+  "component": true
+}

@@ -1,0 +1,9 @@
+<view  class='mylist' bindtap='tolist'>
+<image src='/images/booklist.png' mode='scaleToFill' class='img2'  />
+<view class='text'>我的书单</view>
+</view>
+
+<input class='input' placeholder='搜索图书' bindinput='input'></input>
+
+
+<button bindtap='go' class='go'>搜索</button>
