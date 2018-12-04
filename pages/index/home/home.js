@@ -125,7 +125,11 @@ Component({
   }
   ,
   methods:{
-
+    makeCap(){
+      wx.navigateTo({
+        url: '/pages/me/cap/cap',
+      })
+    },
     job: function () {
       wx.navigateTo({
         url: 'job/job',

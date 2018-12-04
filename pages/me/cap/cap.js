@@ -18,7 +18,9 @@ Page({
     startX:0,
     startY:0,
     desWidth:300,
-    desHeight:300
+    desHeight:300,
+    showAd:false,
+    showCapAd:false
   },
 
   tap:function(e){
@@ -41,9 +43,13 @@ this.data[e.currentTarget.id]=e.detail.value;
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    this.drawAvatar();
-    ctx.draw();
+    
+    this.drawAvatar(1);
+    if (app.data.login) {
+     this.getAvatar();
+    }
   },
+  
 choose:function(){
   wx.showActionSheet({
     itemList: ['从本地选择', '获取自己的头像（较模糊）'],
@@ -69,31 +75,33 @@ choose:function(){
     }
   })
 },
+getAvatar:function(){
+  var avatar = app.data.userInfo.avatarUrl,that=this;
+  let pro=new Promise(function(resolve,reject){
+    if (avatar) {
+      wx.getImageInfo({
+        src: avatar,
+        success: res => {
+          that.data.desHeight = res.height;
+          that.data.desWidth = res.width;
+          that.setData({ avatar: res.path });
+          that.drawAvatar();
+          ctx.draw();
+          that.getIcons();
+        }
+      })
+    }
+  });
+  
+},
   login:function(flag){
     if (!app.data.login || this.data.avatar.indexOf('/images/chris') > 0||flag){
+      if (!app.data.login)
     app.login().then(()=>{
-      var avatar = app.data.userInfo.avatarUrl;
-      if(avatar){
-        wx.getImageInfo({
-          src: avatar,
-          success:res=>{
-            this.data.desHeight=res.height;
-            this.data.desWidth=res.width;
-            this.setData({ avatar:res.path});
-            this.drawAvatar();
-            ctx.draw();
-            this.getIcons();
-           
-          }
-        })
-      }
-      else{
-        wx.showToast({
-          title: '',
-        })
-      }
-    })
-  }
+     this.getAvatar();
+    });
+      else this.getAvatar();
+    }
   /*
   if(flag)
   {
@@ -104,7 +112,8 @@ choose:function(){
 },
 getIcons:function(){
   app.get_base().then(() => {
-    this.setData({ icons: app.data.base.caps });
+    var base = app.data.base;
+    this.setData({ icons: base.caps,showCapAd:base.showCapAd });
     this.drawCap();
   }).catch(() => {
     this.onShow();
@@ -116,7 +125,7 @@ getIcons:function(){
   },
 
 drawCap:function(save){
-  var itmp=this.data.iconTmp;
+  var itmp=this.data.iconTmp,that=this;
       var hei=this.data.height,size=this.data.size,angle=this.data.angle;
       ctx.clearRect(0, 0, hei, hei);
       this.drawAvatar();
@@ -155,7 +164,8 @@ drawCap:function(save){
                   success(res) {
                     wx.showToast({
                       title: '保存成功',
-                    })
+                    });
+                    that.setData({showAd:true})
                    },fail(){
                      app.error2('保存失败，请到个人中心重新授权',()=>{
                        wx.navigateTo({
@@ -173,10 +183,10 @@ drawCap:function(save){
        }
 }
 ,
-drawAvatar:function(){
+drawAvatar:function(draw){
   var hei=this.data.height;     
   ctx.drawImage(this.data.avatar, 0, 0, hei, hei);
-   
+  if (draw) ctx.draw();
 },
 
 start:function(e){
@@ -230,6 +240,9 @@ save:function(){
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    return {
+      title: '是时候戴上圣诞帽了~',
+      path: '/pages/me/cap/cap'
+    }
   }
 })

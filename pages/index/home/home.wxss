@@ -8,9 +8,13 @@ page{
   margin-top: 16rpx;
   font-size: 32rpx;
 margin-right:10rpx;
-
 }
-
+.capPanel{
+  margin: 3%;
+  box-shadow: 0 0 10px #FF6461;
+  border-radius: 5px;
+  padding:2%;
+}
 .ad{
 width: 100%;
 height: 100%;

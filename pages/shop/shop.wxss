@@ -12,7 +12,6 @@ page{
 position:absolute;
 left:80rpx;
 top:5rpx;
-
 }
 .deliver{
   position: fixed;

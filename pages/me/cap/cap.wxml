@@ -1,24 +1,28 @@
-<button class='get' bindtap='choose'>点击选择头像</button>
+<button class='get' hover-class='hover' bindtap='choose'>点击选择头像</button>
 <canvas class='canvas' style='height:{{height}}px'
  canvas-id="myCanvas" bindtouchstart="start" bindtouchmove='move' bindtouchend='end'></canvas>
 
 <view class='func columnPanel'>
 <view class='sub columnPanel'>
 <view class='text'>大小</view>
- <slider class='slider' value="{{size}}" id='size' bindchange="sliderchange" />
+ <slider class='slider' value="{{size}}" activeColor='#F08080' id='size' bindchange="sliderchange" />
 </view>
 <view class='sub columnPanel'>
 <view class='text'>旋转</view>
- <slider class='slider' value='{{angle}}' max='180' min='-180' id='angle' bindchange="sliderchange" />
+ <slider class='slider' value='{{angle}}' activeColor='#F08080' max='180' min='-180' id='angle' bindchange="sliderchange" />
 </view>
 </view>
 
-<scroll-view  scroll-x='true' class='iconPanel'>
-<view  class='rowPanel'style='width:{{icons.length*180}}rpx;'>
+<ad wx:if="{{showAd&&showCapAd}}" unit-id='adunit-eede8ccba0492bc7' ></ad>
+
+<scroll-view  scroll-x class='iconPanel'>
 <view  bindtap='tap'  class='imgPanel {{index==cap_index?"selected":""}}' wx:for="{{icons}}"  id='cap{{index}}'>
 <image class='img' src='{{item}}'></image>
 </view>
-</view>
 </scroll-view>
 
-<button class='save' bindtap='save'>保存到本地</button>
+<view style='height:90rpx;'></view>
+
+<button class='save' hover-class='hover' bindtap='save'>
+<image src='/images/save.png' class='icon'> </image>
+保存到本地</button>

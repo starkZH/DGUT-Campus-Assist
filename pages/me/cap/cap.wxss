@@ -14,17 +14,27 @@ page{
   margin-top: 3%;
   margin-bottom: 3%;
 }
+.box{
+  overflow: hidden;
+
+width: 100%;
+}
 .imgPanel{
   width: 70rpx;
   height: 70rpx;
   padding:30rpx;
-  margin-top: 15rpx;
-  margin-left: 15rpx;
-  box-shadow: 0 0 6px lightgray;
+  margin: 15rpx;
+  box-shadow: 0 0 5px lightgray;
   border-radius: 2px;
+  display: inline-block;
 }
 .selected{
-  box-shadow: 0 0 6px red;
+  box-shadow: 0 0 5px red;
+}
+.icon{
+  width: 36rpx;
+  height: 38rpx;
+  margin-top: 5rpx;  
 }
 .img{
   width:100%;
@@ -32,10 +42,10 @@ height:100%;
 
 }
 .iconPanel{
-  height: 150rpx;
-  box-shadow: 0 0 6px gray;
-  overflow: scroll;
- 
+  height: 160rpx;
+  box-shadow:0 0 6px rgb(173, 173, 173);
+ width: 100%;
+  white-space: nowrap;
 }
 .slider{
   width: 88%;
@@ -45,4 +55,28 @@ height:100%;
   color: #333;
   margin-left: 3%;
   margin-right: 3%;
+}
+
+.get{
+  width: 100%;
+  border:1px solid;
+  color: #FF6461;
+  font-size: 32rpx;
+  border-radius:0;
+  background-color: white;
+}
+button::after{
+  border: none;
+}
+.save{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  color: white;
+  background-color: #FF6461;
+  font-size: 36rpx;
+  border-radius:0;
+}
+.hover{
+  opacity: 0.8;
 }

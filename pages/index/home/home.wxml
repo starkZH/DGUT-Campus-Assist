@@ -28,7 +28,10 @@
 
 </view>
 
-
+<view class='capPanel rowPanel' bindtap='makeCap' wx:if="{{base.showCapLink}}">
+<image  class='icon' src="/images/cap.png" />
+<view class='text' style='margin-top:0;margin-left:5%;font-size:33rpx;'>快来戴上你的圣诞帽吧~~</view>
+</view>
 
 <!--菜单-->
 

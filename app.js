@@ -1,7 +1,7 @@
 const util = require('/pages/utils/util.js');
 App({
   globalData:{
-    menuVersion:'2.1.3'
+    menuVersion:'2.1.5'
   },
 data:{
   host:'https://www.xxxzh.top/assist/',
@@ -104,6 +104,8 @@ login:function(){
                     });
 
                   }
+                },complete(){
+                  wx.hideLoading()
                 }
               })
              
@@ -111,6 +113,7 @@ login:function(){
             }
           })
         } else {
+          wx.hideLoading()
           if (!that.data.me){
             var page = getCurrentPages();
             if (page[page.length - 1].route.indexOf('/index') < 0)
@@ -135,7 +138,7 @@ login:function(){
             reject();
           }
         }
-      }, complete() { wx.hideLoading() }
+      }, complete() { }
     })
   });
   return pro;
