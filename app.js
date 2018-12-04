@@ -31,12 +31,15 @@ error:function(text){
     image:'/images/close.png'
   })
 },
-error2: function (text) {
+error2: function (text,callback) {
   if (text == null) text = '操作失败';
  wx.showModal({
    title: '提示',
    content: text,
-   showCancel:false
+   showCancel:false,
+   success:res=>{
+     typeof callback=='function' && callback();
+   }
  })
 },
 toastAuthorize:function(){
@@ -104,21 +107,33 @@ login:function(){
                 }
               })
              
-              wx.hideLoading();
+             
             }
           })
         } else {
-          if (!that.data.me) wx.showModal({
-            title: '提示',
-            content: '请到底栏-我-授权登录，以获得更好的服务',
-            success: res => {
-              if (res.confirm) {
-                wx.navigateTo({
-                  url: '/pages/me/me',
-                })
+          if (!that.data.me){
+            var page = getCurrentPages();
+            if (page[page.length - 1].route.indexOf('/index') < 0)
+            wx.showModal({
+              title: '提示',
+              content: '请到底栏-我-授权登录，以获得更好的服务',
+              success: res => {
+                if (res.confirm) {
+                  wx.removeStorage({
+                    key: 'userInfo',
+                    success: res => {
+                      that.data.userInfo={};
+                        wx.navigateTo({
+                          url: '/pages/index/index?menuIndex=3',
+                        })
+                    }
+                  })
+
+                }
               }
-            }
-          })
+            })
+            reject();
+          }
         }
       }, complete() { wx.hideLoading() }
     })

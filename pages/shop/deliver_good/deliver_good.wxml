@@ -41,6 +41,7 @@
 <input class='input_l' bindinput='input' id='new_label' maxlength='6'></input>
 <button class='button' bindtap='add_label' size='mini'>添加标签</button>
 </view>
+
 <scroll-view style='width:100%  overflow: scroll;' scroll-x>
 <view  class='labels rowPanel' style='width:{{labels.length*150}}rpx;'>
 <view wx:for="{{labels}}" bindtap='select' id='l{{labelIndex}}' style='color:{{label_state[labelIndex]?"white;background-color:#FF6461;":"#FF6461"}};' wx:for-index='labelIndex' class='label' wx:for-item="label"><view >{{label}}</view></view></view>

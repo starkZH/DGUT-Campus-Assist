@@ -10,9 +10,9 @@ Component({
     login: app.data.scope_userInfo,
   info:app.data.userInfo,
   tip:'点击授权登录',
-  menuItem:['制作我的圣诞帽','我的消息','我发布的','我的二手','我的收藏'],
+    menuItem: ['我的消息', '制作我的圣诞帽','我发布的','我的二手','我的收藏'],
     menuIcon: ['/images/msg.png','/images/msg.png', '/images/fabu.png','/images/ershou.png','/images/un_collect.png'],
-    url: ['/pages/me/cap/cap','/pages/me/my_msg/my_msg', '/pages/me/my_moment/my_moment', '/pages/me/my_goods/my_goods', '/pages/me/collection/collection'],
+    url: ['/pages/me/my_msg/my_msg', '/pages/me/cap/cap','/pages/me/my_moment/my_moment', '/pages/me/my_goods/my_goods', '/pages/me/collection/collection'],
     new_msg: 0,
     showComp: false
   },
@@ -68,6 +68,8 @@ Component({
       if (!app.data.login) {
         app.login().then(() => {
           this.onShow();
+        }).catch(()=>{
+          this.setData({info:{}})
         });
       } else {
 

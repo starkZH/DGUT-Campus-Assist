@@ -5,7 +5,6 @@ var util = require('../utils/util.js');
 Page({
 
 	data:{
-   
     title:['莞工校园助手', '校内圈', '莞工校园二手', '个人中心'],
     menus:['首页','校内圈','二手','个人中心'],
     menuIcon: [['home_Dis.png', 'school_Dis.png', 'shop_Dis.png', 'user_Dis.png'],['home.png','school.png','shop.png','user.png']],
@@ -20,9 +19,10 @@ Page({
 	}
   ,
 onLoad:function(options){
-  var mi = options.menuIndex;
+  var mi = options.menuIndex,ri=this.data.refreshIndex;
   if(mi)
-  this.setData({ menuIndex: options.menuIndex,menuVersion:'0.0.0'})
+  this.setData({ menuIndex: options.menuIndex,menuVersion:'0.0.0'});
+  if(ri)this.setData({refreshIndex:ri})
 }
   ,
   setBase:function(e){
@@ -35,7 +35,6 @@ this.setData({base:e.detail.base})
     this.setData({ menuIndex: e.detail.id})
   },
   makeIndex(){
-    
     return this.data.menuIndex;
   },
 onShow:function(){

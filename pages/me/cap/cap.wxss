@@ -1,1 +1,48 @@
-/* pages/me/cap/cap.wxss */
+page{
+  width: 100%;
+  height: 100%;
+}
+.canvas{
+  margin-left: 20%;
+  width: 60%;
+  height: 40%;
+  box-shadow: 0 0 6px lightgray;
+  margin-top: 6%;
+}
+.func{
+  width: 100%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+.imgPanel{
+  width: 70rpx;
+  height: 70rpx;
+  padding:30rpx;
+  margin-top: 15rpx;
+  margin-left: 15rpx;
+  box-shadow: 0 0 6px lightgray;
+  border-radius: 2px;
+}
+.selected{
+  box-shadow: 0 0 6px red;
+}
+.img{
+  width:100%;
+height:100%;
+
+}
+.iconPanel{
+  height: 150rpx;
+  box-shadow: 0 0 6px gray;
+  overflow: scroll;
+ 
+}
+.slider{
+  width: 88%;
+}
+.text{
+  font-size: 36rpx;
+  color: #333;
+  margin-left: 3%;
+  margin-right: 3%;
+}

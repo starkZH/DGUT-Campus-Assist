@@ -1,4 +1,4 @@
-
+import regeneratorRuntime from './regenerator-runtime/runtime.js'
 var _keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="; 
 
 const formatNumber = n => {
@@ -138,6 +138,21 @@ function _utf8_decode(utftext) {
   return string;
 } 
 
+const getImageInfo=async (path)=>{
+  let res = await  new Promise((resolve, reject) => {
+    wx.showLoading({
+      title: '加载图片中',
+    })
+    wx.getImageInfo({
+      src: path,
+      success: res => {
+        resolve(res.path);
+      }
+    })
+  });
+  return res;
+}
+
 module.exports = {
   formatTime: formatTime,
   getWeek: getWeek,
@@ -145,5 +160,6 @@ module.exports = {
   getDateDis: DateDistan,
   decode: decode,
   commonGetRequest: commonGetRequest,
-  commonPostRequest: commonPostRequest
+  commonPostRequest: commonPostRequest,
+  getImageInfo: getImageInfo
 }
