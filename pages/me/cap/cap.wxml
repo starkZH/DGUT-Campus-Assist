@@ -1,17 +1,11 @@
-<button class='get' hover-class='hover' bindtap='choose'>点击选择头像</button>
-<canvas class='canvas' style='height:{{height}}px'
+<image src='/images/dark_bg.jpg' class='bg'></image>
+
+<button class='get' hover-class='hover' bindtap='choose'>选择自定义头像</button>
+
+<canvas class='canvas'  style='height:{{height}}px;width:{{height}}px;margin-left:{{marginLeft}}px'
  canvas-id="myCanvas" bindtouchstart="start" bindtouchmove='move' bindtouchend='end'></canvas>
 
-<view class='func columnPanel'>
-<view class='sub columnPanel'>
-<view class='text'>大小</view>
- <slider class='slider' value="{{size}}" activeColor='#F08080' id='size' bindchange="sliderchange" />
-</view>
-<view class='sub columnPanel'>
-<view class='text'>旋转</view>
- <slider class='slider' value='{{angle}}' activeColor='#F08080' max='180' min='-180' id='angle' bindchange="sliderchange" />
-</view>
-</view>
+
 
 <ad wx:if="{{showAd&&showCapAd}}" unit-id='adunit-eede8ccba0492bc7' ></ad>
 
@@ -21,8 +15,12 @@
 </view>
 </scroll-view>
 
-<view style='height:90rpx;'></view>
 
-<button class='save' hover-class='hover' bindtap='save'>
-<image src='/images/save.png' class='icon'> </image>
-保存到本地</button>
+<!--view class='get' hover-class='hover' bindtap='choose'>
+<image src='/images/b_choose.jpg' class='bbg'> </image>
+<view class='b2_text'>选择头像</view>
+</view-->
+
+<view class='save rowPanel' hover-class='hover' bindtap='save'>
+<image src='/images/b_save.jpg' class='bbg'> </image>
+<view class='b_text'><image src='/images/save.png' class='icon'> </image>保存到本地</view></view>

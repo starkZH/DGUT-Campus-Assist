@@ -1,7 +1,7 @@
 const util = require('/pages/utils/util.js');
 App({
   globalData:{
-    menuVersion:'2.1.5'
+    menuVersion:'2.1.8'
   },
 data:{
   host:'https://www.xxxzh.top/assist/',

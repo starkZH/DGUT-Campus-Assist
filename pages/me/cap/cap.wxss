@@ -6,7 +6,7 @@ page{
   margin-left: 20%;
   width: 60%;
   height: 40%;
-  box-shadow: 0 0 6px lightgray;
+  box-shadow: 0 0 36px lightgray;
   margin-top: 6%;
 }
 .func{
@@ -25,27 +25,38 @@ width: 100%;
   padding:30rpx;
   margin: 15rpx;
   box-shadow: 0 0 5px lightgray;
+  border: 2px solid rgba(0, 0, 0,0);
   border-radius: 2px;
   display: inline-block;
 }
 .selected{
-  box-shadow: 0 0 5px red;
+  border: 2px solid rgb(252, 73, 115);
+  box-shadow: 0 0 0px lightgray;
 }
 .icon{
   width: 36rpx;
-  height: 38rpx;
-  margin-top: 5rpx;  
+  height: 36rpx;
+  margin-right: 10rpx;
+
 }
 .img{
   width:100%;
 height:100%;
 
 }
+.bbg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 50px;
+}
 .iconPanel{
   height: 160rpx;
-  box-shadow:0 0 6px rgb(173, 173, 173);
+  box-shadow:0 0 6px lightgray;
  width: 100%;
   white-space: nowrap;
+  margin-top: 10%;
 }
 .slider{
   width: 88%;
@@ -58,25 +69,42 @@ height:100%;
 }
 
 .get{
-  width: 100%;
-  border:1px solid;
-  color: #FF6461;
+  border-radius: 3px;
+  color: #FF416C;
   font-size: 32rpx;
-  border-radius:0;
-  background-color: white;
+  width: 40%;
+  border: 1px solid #FF416C;
+  background-color: rgba(0, 0, 0,0);
+
+  margin-left: 3%;
 }
 button::after{
   border: none;
 }
+.b_text{
+  margin-left: 20%;
+  margin-top: 22rpx;
+  width: 60%;
+  text-align: center;
+
+}
+.b2_text{
+  margin-left: 45rpx;
+  margin-top: 22rpx;
+}
 .save{
   position: fixed;
   bottom: 0px;
-  width: 100%;
   color: white;
-  background-color: #FF6461;
-  font-size: 36rpx;
-  border-radius:0;
+  font-size: 34rpx;
+  height: 88rpx;
+  margin: 2%;
+  width: 70%;
+  background-size:100%;
+  border-radius: 2px;
+  margin-left: 15%;
+  
 }
 .hover{
-  opacity: 0.8;
+  opacity: 0.86;
 }
