@@ -24,7 +24,7 @@ Page({
 
   tap:function(e){
     var ti = this.data.targetIcon, cap = e.currentTarget.id.substring(3);
-    ti.push({ cap_index: cap,px:20,py:20,angle:0,size:50});
+    ti.push({ cap_index: cap,px:20,py:20,degree:0,size:80});
     this.setData({ current: ti.length - 1, targetIcon: ti, cap_index:cap});
     this.drawCap();
   },
@@ -109,7 +109,7 @@ getIcons:function(){
     var base = app.data.base;
     this.setData({ icons: base.caps,showCapAd:base.showCapAd });
     if(!this.data.targetIcon.length)
-    this.data.targetIcon.push({ cap_index: 0, px: 20, py: 20, angle: 0, size: 50 });
+    this.data.targetIcon.push({ cap_index: 0, px: 20, py: 20, degree: 0, size: 80 });
     this.drawCap();
   }).catch(() => {
     this.onShow();
@@ -120,17 +120,16 @@ getIcons:function(){
     this.login();
   },
 getCapWidth(size){
-  var hei = this.data.height;
-  return hei * canvasScale * (size / 80.0);
+  return size;
 },
-getRotatePosition(x,y,rx0,ry0,angle){
-  var x0 = (x - rx0) * Math.cos(angle) - (y - ry0) * Math.sin(angle) + rx0,
-    y0 = (x - rx0) * Math.sin(angle) + (y - ry0) * Math.cos(angle) + ry0;
+getRotatePosition(x,y,rx0,ry0,degree){
+  var x0 = (x - rx0) * Math.cos(degree) - (y - ry0) * Math.sin(degree) + rx0,
+    y0 = (x - rx0) * Math.sin(degree) + (y - ry0) * Math.cos(degree) + ry0;
     return [Number(x0),Number(y0)];
 },
 drawCap:function(save){
   var itmp=this.data.iconTmp,that=this,t_icon=this.data.targetIcon;
-  //{cap_index:,px:,py:,angle:,size:}
+  //{cap_index:,px:,py:,degree:,size:}
       var hei = this.data.height;
        ctx.clearRect(0,0,hei,hei)
       this.drawAvatar();
@@ -138,7 +137,7 @@ drawCap:function(save){
           var obj=t_icon[ti];
           if(!obj)return;
           var px = obj.px, py = obj.py, index = obj.cap_index,
-            size = obj.size, angle = obj.angle;
+            size = obj.size, degree = obj.degree;
           var wid = this.getCapWidth(size)//帽子的宽高
           var tmp = this.data.iconTmp[index];
           if (!tmp) {//图片未缓存，下载后再重新调用
@@ -152,10 +151,10 @@ drawCap:function(save){
             return;
           }
           else {//图片已缓存
-            angle = angle * Math.PI / 180;
+            degree = degree * Math.PI / 180;
             var ox = px + (wid / 2), oy = py + (wid / 2)
             ctx.translate(ox,oy);
-            ctx.rotate(angle );
+            ctx.rotate(degree );
             ctx.translate(-wid / 2, -wid / 2);
             ctx.drawImage(tmp, 0, 0, wid, wid);
             //为当前选择对象 绘制虚线框
@@ -168,13 +167,16 @@ drawCap:function(save){
               ctx.drawImage('/images/delete.png', -iconSize / 2, -iconSize/2, iconSize, iconSize);
               ctx.drawImage('/images/rotate.png', wid - iconSize/2, wid - iconSize/2, iconSize, iconSize);
             }
-            ctx.rotate(-angle);
+            ctx.rotate(-degree);
             //计算当前原点绕帽子中心旋转后的坐标
-            var rx0=wid/2,ry0=wid/2,x=0,y=0,pos=this.getRotatePosition(x,y,rx0,ry0,angle);
+            var rx0=wid/2,ry0=wid/2,x=0,y=0,pos=this.getRotatePosition(x,y,rx0,ry0,degree);
             var x0=pos[0],y0=pos[1];
             //将原点恢复为 0,0
             ctx.translate(-px-x0, -py-y0);
-            
+            //
+            obj.ox=ox;
+            obj.oy=oy;
+            this.data.targetIcon[ti]=obj;
             //
           }
         }
@@ -234,13 +236,13 @@ if (this.data.scaleMode)return;
 
 for(var i=t_icon.length-1;i>=0;i--){//倒序读取，因为后添加的会覆盖在之前添加的上面
   var obj=t_icon[i],wid=Number(this.getCapWidth(obj.size)),px=Number(obj.px),py=Number(obj.py),
-  angle=obj.angle*Math.PI/180;
-  var pos=this.getRotatePosition(0,0,(wid/2),(wid/2),angle);
+  degree=obj.degree*Math.PI/180;
+  var pos=this.getRotatePosition(0,0,(wid/2),(wid/2),degree);
   //帽子左上角的坐标px,py;右下角的rx,ry
   px+=pos[0];
   py+=pos[1];
   //console.log(px+' '+py+' '+sx+' '+sy);
-  pos=this.getRotatePosition(wid,wid,wid/2,wid/2,angle);
+  pos=this.getRotatePosition(wid,wid,wid/2,wid/2,degree);
   var rx=pos[0],
   ry=pos[1];
   //删除动作
@@ -279,17 +281,25 @@ move: function (e) {
     ti[current]=obj;
   }else{//缩放模式
     var obj = ti[current],wid=this.getCapWidth(obj.size),px=obj.px,py=obj.py;
-    var ox=(px+wid/2),oy=(py+wid/2);
+    var ox=obj.ox,oy=obj.oy;//px+wid/2
     var old=Math.sqrt((sx-ox)*(sx-ox)+(sy-oy)*(sy-oy)),
     now=Math.sqrt((nx-ox)*(nx-ox)+(ny-oy)*(ny-oy));
-    //当前圆半径比旧圆半径
-    var s = (now- old)/2;
-    ti[current].size+=s;
-    ti[current].px-=s;
-    ti[current].py -= s;
-    ti[current].angle += Math.atan((nx - ox) * 1.0 / (ny - oy)) - Math.atan((sx - ox) * 1.0 / (sy - oy))<0
-    ?1:-1;
-   // console.log(ox+' '+(ny-oy)+' '+(nx-ox)+' '+ti[current].angle)
+    //旧半径，要保持旋转中心不变
+    var old_size=ti[current].size;
+    ti[current].size=now*Math.SQRT2;
+    ti[current].px = ox - ti[current].size/2;
+    ti[current].py = oy - ti[current].size/2;
+    var [y,x]=[(ny-oy),(nx-ox)],
+    tan_a =  y* 1.0 / x, tan_b = 1, 
+    origin_degree = Math.atan(tan_a)*180/Math.PI,
+    rotate_degree = origin_degree -45 ;
+    
+    //处理一些特殊情况
+    if ((y >= 0 && x < 0) || (y < 0 && x < 0))rotate_degree=135+origin_degree;
+
+    console.log(origin_degree + ' ' + rotate_degree + ' ' + y + ' ' + x)
+    ti[current].degree = rotate_degree;
+  //  console.log(ox+' now:['+nx+','+ny+'] '+(ny-oy)+' '+(nx-ox)+' '+ti[current].degree)
   }
   this.data.targetIcon = ti;
   this.data.startX = nx;
@@ -298,13 +308,10 @@ move: function (e) {
 },
 end: function (e) {
   this.data.scaleMode = 0;
-  
-
   //获取头像
   if (this.data.avatar.indexOf('/images/chris')>0)
 this.login();
 },
-
 save:function(){
   this.drawCap(1);
 },
